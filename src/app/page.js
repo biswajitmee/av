@@ -147,7 +147,7 @@ export default function Home() {
               Designer
             </div>
             <div className='pt-20 lg:pt-20'>
-              <div className='relative compresDiv' ref={imageRef1}>
+              <div className='compresDiv' ref={imageRef1}>
                 <div className="compresImg   bg-[url('/box1.svg')]" >
 
                 </div>
