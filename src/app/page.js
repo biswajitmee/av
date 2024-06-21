@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     // Left to right
     gsap.fromTo(imageRef1.current,
-      { width: '0%' },
+      { width: '0%', left:'0' },
       { width: '100%', duration: 1, ease: "power4.out", }
     );
 
@@ -147,9 +147,10 @@ export default function Home() {
               Designer
             </div>
             <div className='pt-20 lg:pt-20'>
-              <div className='compresDiv' ref={imageRef1}>
+            <div className='compresCover'> 
+              <div className='compresDiv' ref={imageRef2}>
                 <div className="compresImg   bg-[url('/box1.svg')]" >
-
+</div>
                 </div>
               </div>
 
