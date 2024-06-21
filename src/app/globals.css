@@ -716,6 +716,22 @@ video {
   background-image: url('/designer_bg.jpg');
 }
 
+.bg-\[url\(\'\/designer_box\.jpeg\'\)\]{
+  background-image: url('/designer_box.jpeg');
+}
+
+.bg-\[url\(\'\/designer_box\.jpg\'\)\]{
+  background-image: url('/designer_box.jpg');
+}
+
+.bg-\[url\(\'\/casual_bg\.jpg\'\)\]{
+  background-image: url('/casual_bg.jpg');
+}
+
+.bg-\[url\(\'\/casual_box\.jpg\'\)\]{
+  background-image: url('/casual_box.jpg');
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;

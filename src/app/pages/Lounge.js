@@ -5,18 +5,27 @@ import { gsap } from 'gsap';
 function Designer() {
     const oneShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
+    const compresTextRef = useRef(null);
+
 
     useEffect(() => {
         const showOneShowcase = () => {
             gsap.fromTo(oneShowcaseRef.current,
-                { display: 'none' },
-                { display: 'block', duration: 0.5 }
+                { display: 'none', opacity:0, duration: 0.5, },
+                { display: 'block', duration: 0.5, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
                 { width: '0%', right: '0', left: 'auto' },
                 { width: '100%', duration: 1, ease: "power4.out" }
             );
+
+            gsap.fromTo(compresTextRef.current,
+                {opacity:0, x:-200},
+                {opacity:1,x:0, duration:0.5 }
+            );
+
+
         };
 
         const hideOneShowcase = () => {
@@ -52,11 +61,11 @@ function Designer() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/box1.svg')]">
+                            <div className="compresImg bg-[url('/designer_box.jpg')]">
                             </div>
                         </div>
                     </div>
-                    <p className='text-3xl'>Build a quality brand <br /> worth your effort</p>
+                    <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
                 </div>
             </div>
         </div>
