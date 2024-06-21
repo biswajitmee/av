@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function Designer() {
+function Casual() {
     const oneShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
@@ -38,7 +38,7 @@ function Designer() {
             );
         };
 
-        const spanElement = document.querySelector('.one span');
+        const spanElement = document.querySelector('.two span');
         if (spanElement) {
             spanElement.addEventListener('mouseenter', showOneShowcase);
             spanElement.addEventListener('mouseleave', hideOneShowcase);
@@ -72,4 +72,4 @@ function Designer() {
     );
 }
 
-export default Designer;
+export default Casual;

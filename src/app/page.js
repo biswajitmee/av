@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 import Designer from './pages/designer';
+import Casual from './pages/casual';
+import Athletic from './pages/athletic';
 
 export default function Home() {
 
@@ -92,20 +94,11 @@ export default function Home() {
 
 <Designer/>
  
+ <Casual />
 
+<Athletic />
 
-
-
-        {/* <div className="showcase twoShowcase bg-green-400">
-
-
-
-        </div>
-        <div className="showcase threeShowcase bg-blue-600">
-
-
-
-        </div> */}
+        
 
       </div>
       <div class="text-white text-lg h-96 bg-amber-300">

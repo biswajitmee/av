@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function Designer() {
+function Athletic() {
     const oneShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
@@ -38,7 +38,7 @@ function Designer() {
             );
         };
 
-        const spanElement = document.querySelector('.one span');
+        const spanElement = document.querySelector('.three span');
         if (spanElement) {
             spanElement.addEventListener('mouseenter', showOneShowcase);
             spanElement.addEventListener('mouseleave', hideOneShowcase);
@@ -53,7 +53,7 @@ function Designer() {
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/designer_bg.jpg')] hidden">
+        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/athletics_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -61,7 +61,7 @@ function Designer() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/designer_box.jpg')]">
+                            <div className="compresImg bg-[url('/athletics_box.jpg')]">
                             </div>
                         </div>
                     </div>
@@ -72,4 +72,4 @@ function Designer() {
     );
 }
 
-export default Designer;
+export default Athletic;
