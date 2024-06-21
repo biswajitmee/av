@@ -6,7 +6,31 @@ import Designer from './designer';
 
 export default function Home() {
 
- 
+
+  // useEffect(() => {
+  //   const designer = gsap.timeline( );
+  //   designer
+  //     .from('.oneShowcase', 
+  //       { opacity: 0, display: 'none',  },         
+  //     )
+  //     .to('.oneShowcase', 
+  //       { opacity: 1, display: 'block', duration: 0, ease: 'power1.in',zIndex:999 }
+  //     );
+  //   const handleDesignerEnter = () => {
+  //     designer.restart();
+  //   };
+  //   const handleDesignerLeave = () => {
+  //     designer.reverse();
+  //   };
+  //   document.querySelector('.one').addEventListener('mouseenter', handleDesignerEnter);
+  //   document.querySelector('.one').addEventListener('mouseleave', handleDesignerLeave);
+
+  //   return () => {
+  //     document.querySelector('.one').removeEventListener('mouseenter', handleDesignerEnter);
+  //     document.querySelector('.one').removeEventListener('mouseleave', handleDesignerLeave);
+  //   };
+
+  // }, []);
 
 
 
@@ -74,7 +98,7 @@ export default function Home() {
 
       <div className="scrollSection">
 
-        <div className="showcase threeShowcase">
+        {/* <div className="showcase threeShowcase">
           <div className="showcase w-full h-full">
             <video
               className="w-full h-full object-cover"
@@ -85,7 +109,7 @@ export default function Home() {
               playsInline
             />
           </div>
-        </div>
+        </div> */}
 
         
 
