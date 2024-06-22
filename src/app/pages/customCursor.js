@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
- 
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -29,7 +28,7 @@ const CustomCursor = () => {
       cursorRef.current.classList.remove('cursor-hover');
     };
 
-    document.querySelectorAll('a, button, .left_nav, .menuButton').forEach((element) => {
+    document.querySelectorAll('a, button, .left_nav, .menuButton, body').forEach((element) => {
       element.addEventListener('mouseenter', handleMouseEnter);
       element.addEventListener('mouseleave', handleMouseLeave);
     });
@@ -42,7 +41,7 @@ const CustomCursor = () => {
     };
   }, []);
 
-  return <div ref={cursorRef} className="custom-cursor"></div>;
+  return <div ref={cursorRef} className="custom-cursor fixed z-[1000] pointer-events-none"></div>;
 };
 
 export default CustomCursor;

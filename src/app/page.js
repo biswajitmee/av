@@ -1,70 +1,53 @@
-"use client"
+"use client";
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
- 
- gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 import Designer from './pages/designer';
 import Casual from './pages/casual';
 import Athleisure from './pages/athleisure';
 import Lounge from './pages/lounge';
- 
 import CustomCursor from './pages/customCursor';
+import LogoScroller from './brandHorizentalAnimation';
 
 export default function Home() {
-
-
   const main = useRef();
   const smoother = useRef();
 
-
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // create the smooth scroller FIRST!
       smoother.current = ScrollSmoother.create({
-        smooth: 2, // seconds it takes to "catch up" to native scroll position
-        effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+        smooth: 2,
+        effects: true,
       });
-    
     }, main);
     return () => ctx.revert();
   }, []);
 
-
-
   return (
     <>
-<div id="smooth-wrapper" ref={main}>
+      <CustomCursor />
+      <div id="smooth-wrapper" ref={main}>
         <div id="smooth-content">
 
- <CustomCursor/>
- 
-      <nav class="absolute container z-50 mt-8">
-        <div class="relative container mx-auto  flex items-center justify-between">
+          <nav className="absolute container z-50 mt-8">
+            <div className="relative container mx-auto flex items-center justify-between">
+              <div className="absolute left-0 w-24 h-12 flex items-center justify-center">
+                <a href="#" className="menuButton">Menu</a>
+              </div>
+              <div className="w-24 h-12 mx-auto flex items-center justify-center">
+                <img src='./logo_av.svg' alt="Logo" />
+              </div>
+              <div className="absolute right-0 w-40 mr-4 h-12 flex items-center justify-center">
+                <a href="#" className="schdule">Schedule a call</a>
+              </div>
+            </div>
+          </nav>
 
-          <div class="absolute left-0 w-24 h-12 flex items-center justify-center ">
-             <a href='#' className='menuButton'>Menu</a>
-          </div>
-
-
-          <div class="w-24 h-12 mx-auto flex items-center justify-center">
-            <img src='./logo_av.svg'/>
-          </div>
-
-
-          <div class="absolute right-0 w-40 mr-4 h-12 flex items-center justify-center ">
-          <a href='#' className='schdule'>Schedule a call</a>
-          </div>
-        </div>
-      </nav>
-
-
-
-
-      <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
+     <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
         <div class="pl-3 ">
           <div className="one left_nav">
             <a>Designer</a>
@@ -102,40 +85,35 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="scrollSection">
 
-        <div className="showcase threeShowcase">
-          <div className="showcase w-full h-full">
-            <video
-              className="w-full h-full object-cover"
-              src="bg_video.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
+          <div className="ShowCaseSection">
+            <div className="showcase threeShowcase">
+              <div className="showcase w-full h-full">
+                <video
+                  className="w-full h-full object-cover"
+                  src="bg_video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
+            </div>
+            <Designer />
+            <Casual />
+            <Athleisure />
+            <Lounge />
           </div>
+
+
+          <div className="ScrollSection bg-white pt-5 pb-5 ">
+            <LogoScroller />
+          </div>
+
+
+          <div className='h-96'> customer curser not working here </div>
         </div>
-
-
-
-
-        <Designer />
-        <Casual />
-        <Athleisure />
-        <Lounge />
-
-    
-
       </div>
-      <div class="text-white text-lg h-96 bg-amber-300">
-        Full Screen Div
-      </div>
-
-
-</div>
-</div>
-
     </>
   );
 }

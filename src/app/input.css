@@ -111,11 +111,12 @@ body {
     padding: 9px 0px;
  
   }
-
-  .scrollSection {
+ 
+  .ShowCaseSection {
     position: relative;
     height: 100vh;
     width: 100%;
+    clear: both;
   }
 
   .showcase {
