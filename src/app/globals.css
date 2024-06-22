@@ -864,6 +864,10 @@ a, a:hover, button, .left_nav {
   font-weight: 600;
 }
 
+.leftPanel{
+  height: 100vh;
+}
+
 .leftPanel a {
   font-size: 14px;
   border-radius: 50px;

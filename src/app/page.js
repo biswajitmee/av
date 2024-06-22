@@ -25,7 +25,7 @@ export default function Home() {
     const ctx = gsap.context(() => {
       // create the smooth scroller FIRST!
       smoother.current = ScrollSmoother.create({
-        smooth: 5, // seconds it takes to "catch up" to native scroll position
+        smooth: 2, // seconds it takes to "catch up" to native scroll position
         effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
       });
     
