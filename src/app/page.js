@@ -47,43 +47,43 @@ export default function Home() {
             </div>
           </nav>
 
-     <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
-        <div class="pl-3 ">
-          <div className="one left_nav">
-            <a>Designer</a>
+          <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
+            <div class="pl-3 ">
+              <div className="one left_nav">
+                <a>Designer</a>
+              </div>
+              <div className="two left_nav">
+                <a>Casual</a>
+              </div>
+              <div className="three left_nav">
+                <a>Athleisure </a>
+              </div>
+              <div className="four left_nav">
+                <a>Lounge </a>
+              </div>
+              <div className="five left_nav">
+                <a>High Street </a>
+              </div>
+              <div className="six left_nav">
+                <a>  Athletic</a>
+              </div>
+              <div className="seven left_nav">
+                <a>Swim </a>
+              </div>
+              <div className="eight left_nav">
+                <a> Denim</a>
+              </div>
+              <div className="nine left_nav">
+                <a> Full-fashion </a>
+              </div>
+              <div className="ten left_nav">
+                <a>Outdoors </a>
+              </div>
+              <div className="eleven left_nav">
+                <a> Others </a>
+              </div>
+            </div>
           </div>
-          <div className="two left_nav">
-            <a>Casual</a>
-          </div>
-          <div className="three left_nav">
-            <a>Athleisure </a>
-          </div>
-          <div className="four left_nav">
-            <a>Lounge </a>
-          </div>
-          <div className="five left_nav">
-            <a>High Street </a>
-          </div>
-          <div className="six left_nav">
-            <a>  Athletic</a>
-          </div>
-          <div className="seven left_nav">
-            <a>Swim </a>
-          </div>
-          <div className="eight left_nav">
-            <a> Denim</a>
-          </div>
-          <div className="nine left_nav">
-            <a> Full-fashion </a>
-          </div>
-          <div className="ten left_nav">
-            <a>Outdoors </a>
-          </div>
-          <div className="eleven left_nav">
-            <a> Others </a>
-          </div>
-        </div>
-      </div>
 
 
           <div className="ShowCaseSection">
@@ -107,7 +107,12 @@ export default function Home() {
 
 
           <div className="ScrollSection bg-white pt-5 pb-5 ">
-            <LogoScroller />
+
+            <LogoScroller />  
+            <p className="flex justify-center items-center text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl h-60 sm:h-96 md:h-96">
+              Odds are you’ve worn a<br /> product we’ve made
+            </p>
+
           </div>
 
 

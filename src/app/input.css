@@ -36,7 +36,7 @@ body {
     cursor: none;
   }
 
-  .custom-cursor {
+  /* .custom-cursor {
     position: fixed;
     width: 15px;
     height: 15px;
@@ -51,7 +51,7 @@ body {
   .custom-cursor.cursor-hover {
     width: 40px;
     height: 40px;
-    border: 2px solid white;
+    border: 2px solid #f1f1f1;
     background-color: transparent;
   }
   
@@ -65,6 +65,52 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  } */
+  
+
+  .custom-cursor {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-cursor.cursor-hover {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+  
+  .custom-cursor .inner-dot {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+  }
+  
+  body a:hover .custom-cursor,
+  body button:hover .custom-cursor,
+  body .left_nav:hover .custom-cursor,
+  body .menuButton:hover .custom-cursor {
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+  }
+  
+  body a:hover .custom-cursor .inner-dot,
+  body button:hover .custom-cursor .inner-dot,
+  body .left_nav:hover .custom-cursor .inner-dot,
+  body .menuButton:hover .custom-cursor .inner-dot {
+    background-color: white;
   }
   
   
@@ -159,5 +205,13 @@ body {
     position: absolute;
     right: 0;
   }
+
+
+.ScrollSection{    font-family: "Sansita", sans-serif; }
+
+
+
+
+
 
 }
