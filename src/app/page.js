@@ -1,6 +1,11 @@
 "use client"
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+ 
+ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 
 import Designer from './pages/designer';
 import Casual from './pages/casual';
@@ -12,28 +17,46 @@ import CustomCursor from './pages/customCursor';
 export default function Home() {
 
 
+  const main = useRef();
+  const smoother = useRef();
+
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      // create the smooth scroller FIRST!
+      smoother.current = ScrollSmoother.create({
+        smooth: 5, // seconds it takes to "catch up" to native scroll position
+        effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+      });
+    
+    }, main);
+    return () => ctx.revert();
+  }, []);
 
 
 
   return (
     <>
+<div id="smooth-wrapper" ref={main}>
+        <div id="smooth-content">
+
  <CustomCursor/>
  
-      <nav class="absolute container z-50">
+      <nav class="absolute container z-50 mt-8">
         <div class="relative container mx-auto  flex items-center justify-between">
 
-          <div class="absolute left-0 w-24 h-12 flex items-center justify-center bg-gray-700 text-white">
-            Left
+          <div class="absolute left-0 w-24 h-12 flex items-center justify-center ">
+             <a href='#' className='menuButton'>Menu</a>
           </div>
 
 
-          <div class="w-24 h-12 mx-auto flex items-center justify-center bg-gray-700 text-white">
-            Center
+          <div class="w-24 h-12 mx-auto flex items-center justify-center">
+            <img src='./logo_av.svg'/>
           </div>
 
 
-          <div class="absolute right-0 w-24 h-12 flex items-center justify-center bg-gray-700 text-white">
-            Right
+          <div class="absolute right-0 w-40 mr-4 h-12 flex items-center justify-center ">
+          <a href='#' className='schdule'>Schedule a call</a>
           </div>
         </div>
       </nav>
@@ -42,7 +65,7 @@ export default function Home() {
 
 
       <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
-        <div class="p-10 ">
+        <div class="pl-3 ">
           <div className="one left_nav">
             <a>Designer</a>
           </div>
@@ -110,7 +133,8 @@ export default function Home() {
       </div>
 
 
-
+</div>
+</div>
 
     </>
   );

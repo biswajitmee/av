@@ -29,13 +29,13 @@ const CustomCursor = () => {
       cursorRef.current.classList.remove('cursor-hover');
     };
 
-    document.querySelectorAll('a, button, .hover-target').forEach((element) => {
+    document.querySelectorAll('a, button, .left_nav, .menuButton').forEach((element) => {
       element.addEventListener('mouseenter', handleMouseEnter);
       element.addEventListener('mouseleave', handleMouseLeave);
     });
 
     return () => {
-      document.querySelectorAll('a, button, .hover-target').forEach((element) => {
+      document.querySelectorAll('a, button, .left_nav, .menuButton').forEach((element) => {
         element.removeEventListener('mouseenter', handleMouseEnter);
         element.removeEventListener('mouseleave', handleMouseLeave);
       });
