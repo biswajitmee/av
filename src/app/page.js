@@ -6,7 +6,8 @@ import Designer from './pages/designer';
 import Casual from './pages/casual';
 import Athleisure from './pages/athleisure';
 import Lounge from './pages/lounge';
-
+ 
+import CustomCursor from './pages/customCursor';
 
 export default function Home() {
 
@@ -16,6 +17,8 @@ export default function Home() {
 
   return (
     <>
+ <CustomCursor/>
+ 
       <nav class="absolute container z-50">
         <div class="relative container mx-auto  flex items-center justify-between">
 
@@ -41,37 +44,37 @@ export default function Home() {
       <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
         <div class="p-10 ">
           <div className="one left_nav">
-            <span>Designer</span>
+            <a>Designer</a>
           </div>
           <div className="two left_nav">
-            <span>Casual</span>
+            <a>Casual</a>
           </div>
           <div className="three left_nav">
-            <span>Athleisure </span>
+            <a>Athleisure </a>
           </div>
           <div className="four left_nav">
-            <span>Lounge </span>
+            <a>Lounge </a>
           </div>
           <div className="five left_nav">
-            <span>High Street </span>
+            <a>High Street </a>
           </div>
           <div className="six left_nav">
-            <span>  Athletic</span>
+            <a>  Athletic</a>
           </div>
           <div className="seven left_nav">
-            <span>Swim </span>
+            <a>Swim </a>
           </div>
           <div className="eight left_nav">
-            <span> Denim</span>
+            <a> Denim</a>
           </div>
           <div className="nine left_nav">
-            <span> Full-fashion </span>
+            <a> Full-fashion </a>
           </div>
           <div className="ten left_nav">
-            <span>Outdoors </span>
+            <a>Outdoors </a>
           </div>
           <div className="eleven left_nav">
-            <span> Others </span>
+            <a> Others </a>
           </div>
         </div>
       </div>
