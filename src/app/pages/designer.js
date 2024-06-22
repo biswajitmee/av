@@ -12,7 +12,7 @@ function Designer() {
         const showOneShowcase = () => {
             gsap.fromTo(oneShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
-                { display: 'block', duration: 0.5, opacity:1 }
+                { display: 'block', duration: 0.1, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
@@ -29,6 +29,12 @@ function Designer() {
         };
 
         const hideOneShowcase = () => {
+
+            gsap.killTweensOf(oneShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
             gsap.to(oneShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
@@ -36,15 +42,28 @@ function Designer() {
             gsap.to(compresDivRef.current,
                 { width: '0%', duration: 1, ease: "power4.out" }
             );
+
+            gsap.fromTo(oneShowcaseRef.current,
+                { display: 'block', duration: 0.2, opacity:1 },
+                { display: 'none', opacity:0, duration: 0.5, }
+               
+            );
         };
 
-        const spanElement = document.querySelector('.one span');
+        const spanElement = document.querySelector('.one');
         if (spanElement) {
             spanElement.addEventListener('mouseenter', showOneShowcase);
             spanElement.addEventListener('mouseleave', hideOneShowcase);
         }
 
+
+
+
+
         return () => {
+
+
+
             if (spanElement) {
                 spanElement.removeEventListener('mouseenter', showOneShowcase);
                 spanElement.removeEventListener('mouseleave', hideOneShowcase);
@@ -73,3 +92,7 @@ function Designer() {
 }
 
 export default Designer;
+
+
+
+

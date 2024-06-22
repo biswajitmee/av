@@ -618,10 +618,6 @@ video {
   z-index: 50;
 }
 
-.z-30{
-  z-index: 30;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -704,12 +700,20 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/athletic_box\.jpg\'\)\]{
-  background-image: url('/athletic_box.jpg');
+.bg-\[url\(\'\/athleisure_bg\.jpg\'\)\]{
+  background-image: url('/athleisure_bg.jpg');
+}
+
+.bg-\[url\(\'\/athleisure_box\.jpg\'\)\]{
+  background-image: url('/athleisure_box.jpg');
 }
 
 .bg-\[url\(\'\/athletics_bg\.jpg\'\)\]{
   background-image: url('/athletics_bg.jpg');
+}
+
+.bg-\[url\(\'\/athletics_box\.jpg\'\)\]{
+  background-image: url('/athletics_box.jpg');
 }
 
 .bg-\[url\(\'\/box1\.svg\'\)\]{
@@ -732,8 +736,12 @@ video {
   background-image: url('/designer_box.jpg');
 }
 
-.bg-\[url\(\'\/athletics_box\.jpg\'\)\]{
-  background-image: url('/athletics_box.jpg');
+.bg-\[url\(\'\/lounge_bg\.jpg\'\)\]{
+  background-image: url('/lounge_bg.jpg');
+}
+
+.bg-\[url\(\'\/lounge_box\.jpg\'\)\]{
+  background-image: url('/lounge_box.jpg');
 }
 
 .object-cover{
@@ -790,8 +798,7 @@ video {
 }
 
 .leftPanel .left_nav {
-  margin: 14px 0px;
-  position: relative;
+  padding: 9px 0px;
 }
 
 .scrollSection {

@@ -12,7 +12,7 @@ function Athletic() {
         const showOneShowcase = () => {
             gsap.fromTo(oneShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
-                { display: 'block', duration: 0.5, opacity:1 }
+                { display: 'block', duration: 0.9, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
@@ -35,6 +35,12 @@ function Athletic() {
 
             gsap.to(compresDivRef.current,
                 { width: '0%', duration: 1, ease: "power4.out" }
+            );
+
+            gsap.fromTo(oneShowcaseRef.current,
+               
+                { display: 'block', duration: 0.9, opacity:1 },
+                { display: 'none', opacity:0, duration: 0.5, }
             );
         };
 

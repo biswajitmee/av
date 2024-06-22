@@ -45,8 +45,8 @@ body {
   }
 
   .leftPanel .left_nav {
-    margin: 14px 0px;
-    position: relative;
+    padding: 9px 0px;
+ 
   }
 
   .scrollSection {
@@ -78,7 +78,7 @@ body {
     width: 400px;
     height: 500px;
     position: relative;
-  
+
   }
 
   .compresDiv {
@@ -92,8 +92,8 @@ body {
     width: 400px;
     height: 500px;
     background-position: center center;
- position: absolute;
- right: 0;
+    position: absolute;
+    right: 0;
   }
 
 }

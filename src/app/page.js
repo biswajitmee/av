@@ -4,11 +4,13 @@ import { gsap } from 'gsap';
 
 import Designer from './pages/designer';
 import Casual from './pages/casual';
-import Athletic from './pages/athletic';
+import Athleisure from './pages/athleisure';
+import Lounge from './pages/lounge';
+
 
 export default function Home() {
 
- 
+
 
 
 
@@ -40,7 +42,7 @@ export default function Home() {
         <div class="p-10 ">
           <div className="one left_nav">
             <span>Designer</span>
-            </div>
+          </div>
           <div className="two left_nav">
             <span>Casual</span>
           </div>
@@ -89,16 +91,15 @@ export default function Home() {
           </div>
         </div>
 
-        
 
 
-<Designer/>
- 
- <Casual />
 
-<Athletic />
+        <Designer />
+        <Casual />
+        <Athleisure />
+        <Lounge />
 
-        
+    
 
       </div>
       <div class="text-white text-lg h-96 bg-amber-300">
