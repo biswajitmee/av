@@ -1065,6 +1065,11 @@ body a:hover .custom-cursor .inner-dot,
 
 .leftPanel .left_nav {
   padding: 9px 0px;
+  
+}
+.leftPanel .left_nav a{
+  color:#fff;
+  
 }
 
 .ShowCaseSection {

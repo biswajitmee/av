@@ -68,7 +68,7 @@ function Casual() {
     return (
         <div ref={twoShowcaseRef} className="showcase twoShowcase bg-red-500 bg-[url('/casual_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
-                <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
+                <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl text-white'>
                     Casual
                 </div>
                 <div className='pt-20 lg:pt-20'>
@@ -78,7 +78,7 @@ function Casual() {
                             </div>
                         </div>
                     </div>
-                    <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
+                    <p className='text-3xl text-white'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
                 </div>
             </div>
         </div>

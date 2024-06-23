@@ -9,10 +9,17 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 import Designer from './pages/designer';
 import Casual from './pages/casual';
 import Athleisure from './pages/athleisure';
-import Lounge from './pages/lounge';
+import Lounge from './pages/Lounge';
 import CustomCursor from './pages/customCursor';
 import LogoScroller from './brandHorizentalAnimation';
 import WhatWeDo from './whatWeDo';
+import Highstreet from './pages/highstreet';
+import Athletic from './pages/athletic';
+import Swim from './pages/swim';
+import Denim from './pages/denim';
+import Fullfashion from './pages/fullfashion';
+import Outdoors from './pages/outdoors';
+import Others from './pages/others';
  
 
 export default function Home() {
@@ -105,6 +112,13 @@ export default function Home() {
             <Casual />
             <Athleisure />
             <Lounge />
+            <Highstreet />
+            <Athletic />
+            <Swim />
+            <Denim />
+            <Fullfashion />
+            <Outdoors />
+            <Others />
           </div>
 
 

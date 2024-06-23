@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function Designer() {
+function Others() {
     const oneShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
@@ -12,7 +12,7 @@ function Designer() {
         const showOneShowcase = () => {
             gsap.fromTo(oneShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
-                { display: 'block', duration: 0.1, opacity:1 }
+                { display: 'block', duration: 0.5, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
@@ -29,12 +29,6 @@ function Designer() {
         };
 
         const hideOneShowcase = () => {
-
-            gsap.killTweensOf(oneShowcaseRef.current);
-            gsap.killTweensOf(compresDivRef.current);
-            gsap.killTweensOf(compresTextRef.current);
-
-
             gsap.to(oneShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
@@ -42,28 +36,15 @@ function Designer() {
             gsap.to(compresDivRef.current,
                 { width: '0%', duration: 1, ease: "power4.out" }
             );
-
-            gsap.fromTo(oneShowcaseRef.current,
-                { display: 'block', duration: 0.2, opacity:1 },
-                { display: 'none', opacity:0, duration: 0.5, }
-               
-            );
         };
 
-        const spanElement = document.querySelector('.one');
+        const spanElement = document.querySelector('.eleven span');
         if (spanElement) {
             spanElement.addEventListener('mouseenter', showOneShowcase);
             spanElement.addEventListener('mouseleave', hideOneShowcase);
         }
 
-
-
-
-
         return () => {
-
-
-
             if (spanElement) {
                 spanElement.removeEventListener('mouseenter', showOneShowcase);
                 spanElement.removeEventListener('mouseleave', hideOneShowcase);
@@ -72,15 +53,15 @@ function Designer() {
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/designer_bg.jpg')] hidden">
-            <div ref={compresTextRef} className="flex flex-col lg:flex-row justify-center">
+        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/outdoors_bg.jpg')] hidden">
+            <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl text-white'>
-                    Designer
+                Others
                 </div>
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/designer_box.jpg')]">
+                            <div className="compresImg bg-[url('/outdoors_box.jpg')]">
                             </div>
                         </div>
                     </div>
@@ -91,8 +72,4 @@ function Designer() {
     );
 }
 
-export default Designer;
-
-
-
-
+export default Others;
