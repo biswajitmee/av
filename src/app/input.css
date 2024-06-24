@@ -32,7 +32,10 @@ body {
     cursor: none;
   }
 
-  a, a:hover, button, .left_nav {
+  a,
+  a:hover,
+  button,
+  .left_nav {
     cursor: none;
   }
 
@@ -66,7 +69,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   } */
-  
+
 
   .custom-cursor {
     width: 15px;
@@ -80,14 +83,14 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+
   .custom-cursor.cursor-hover {
     width: 35px;
     height: 35px;
     border: 1px solid white;
     background-color: transparent;
   }
-  
+
   .custom-cursor .inner-dot {
     width: 2px;
     height: 2px;
@@ -95,7 +98,7 @@ body {
     background-color: white;
     mix-blend-mode: difference;
   }
-  
+
   body a:hover .custom-cursor,
   body button:hover .custom-cursor,
   body .left_nav:hover .custom-cursor,
@@ -105,15 +108,15 @@ body {
     height: 35px;
     border: 1px solid white;
   }
-  
+
   body a:hover .custom-cursor .inner-dot,
   body button:hover .custom-cursor .inner-dot,
   body .left_nav:hover .custom-cursor .inner-dot,
   body .menuButton:hover .custom-cursor .inner-dot {
     background-color: white;
   }
-  
-  
+
+
 
 
 
@@ -122,42 +125,56 @@ body {
   }
 
 
-  .menuButton{ padding: 5px 20px;
-    background-color: #28262F; 
+  .menuButton {
+    padding: 5px 20px;
+    background-color: #28262F;
     backdrop-filter: blur(10px);
     color: #fff;
     font-size: 12px;
     border-radius: 50px;
     border: 1px solid rgba(168, 168, 168, 0.034);
   }
-  .menuButton:hover{border: 1px solid #fff; 
-    transition:  border 0.3s ease; }
 
-    .schdule{ padding: 12px 15px; border-radius: 8px; background-color: #FFE700; color: #000; font-weight: 600; }
+  .menuButton:hover {
+    border: 1px solid #fff;
+    transition: border 0.3s ease;
+  }
 
-    .leftPanel{ height: 100vh;}
+  .schdule {
+    padding: 12px 15px;
+    border-radius: 8px;
+    background-color: #FFE700;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .leftPanel {
+    height: 100vh;
+  }
 
   .leftPanel a {
     font-size: 14px;
     border-radius: 50px;
     padding: 7px 18px;
-    background-color: rgba(55, 50, 70, 0.703); 
+    background-color: rgba(55, 50, 70, 0.703);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(168, 168, 168, 0.034);
-    
+
   }
-  .leftPanel a:hover { border: 1px solid #fff; 
-    transition:  border 0.3s ease;
-    background-color: rgba(52, 43, 76, 0.233); 
+
+  .leftPanel a:hover {
+    border: 1px solid #fff;
+    transition: border 0.3s ease;
+    background-color: rgba(52, 43, 76, 0.233);
   }
 
 
 
   .leftPanel .left_nav {
     padding: 9px 0px;
- 
+
   }
- 
+
   .ShowCaseSection {
     position: relative;
     height: 100vh;
@@ -174,11 +191,7 @@ body {
 
   }
 
-  /* .oneShowcase, .twoShowcase, .threeShowcase{ display: none;} */
-
-  /* .bgImage{ }
-
-.upperBoxes{ } */
+ 
 
   .sansita {
     font-family: "Sansita", sans-serif;
@@ -207,14 +220,59 @@ body {
   }
 
 
-.ScrollSection{    font-family: "Sansita", sans-serif; }
+  .ScrollSection {
+    font-family: "Sansita", sans-serif;
+  }
 
 
-.bordr{ border-top: 1px solid #CECECE;}
+  .bordr {
+    border: 1px solid #CECECE;
+  }
+ 
 
-.whtdo{font-family: "Archivo", sans-serif;   }
-.whtdo h1{}
-.whtdo h5{}
+  .whtdo {
+    font-family: "Archivo", sans-serif;
+  }
+
+ 
+
+  .revelCover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0;
+  }
+  
+  .revelDiv {
+    overflow: hidden;
+    position: relative;
+    width: 100%; 
+    bottom: 0; 
+  }
+  
+  .revelImg {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .revelImg img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .revelImg video {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+
+
+
 
 
 }

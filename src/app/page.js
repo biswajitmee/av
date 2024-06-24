@@ -14,6 +14,7 @@ import CustomCursor from './pages/customCursor';
 import LogoScroller from './brandHorizentalAnimation';
 import WhatWeDo from './whatWeDo';
  
+ 
 
 export default function Home() {
   const main = useRef();
@@ -117,8 +118,8 @@ export default function Home() {
 
                     
             <WhatWeDo />
-
-
+ 
+  
 
           </div>
 

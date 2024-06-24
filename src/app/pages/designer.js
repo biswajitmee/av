@@ -55,20 +55,15 @@ function Designer() {
             spanElement.addEventListener('mouseenter', showOneShowcase);
             spanElement.addEventListener('mouseleave', hideOneShowcase);
         }
-
-
-
-
-
         return () => {
-
-
-
             if (spanElement) {
                 spanElement.removeEventListener('mouseenter', showOneShowcase);
                 spanElement.removeEventListener('mouseleave', hideOneShowcase);
             }
         };
+
+
+        
     }, []);
 
     return (
