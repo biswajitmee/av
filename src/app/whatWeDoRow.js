@@ -8,6 +8,8 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
   const heightsDivRef = useRef(null);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)'); // Assuming large devices are 1024px and above
+
     const expandBoxImg = () => {
       gsap.killTweensOf(compresDivRef.current);
       gsap.killTweensOf(heightsDivRef.current);
@@ -35,16 +37,39 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
       );
     };
 
-    const spanElement = document.querySelector(`.${rowClass}`);
-    if (spanElement) {
-      spanElement.addEventListener('mouseenter', expandBoxImg);
-      spanElement.addEventListener('mouseleave', collpsBoxImg);
-    }
-    return () => {
+    const addHoverEvents = () => {
+      const spanElement = document.querySelector(`.${rowClass}`);
+      if (spanElement) {
+        spanElement.addEventListener('mouseenter', expandBoxImg);
+        spanElement.addEventListener('mouseleave', collpsBoxImg);
+      }
+    };
+
+    const removeHoverEvents = () => {
+      const spanElement = document.querySelector(`.${rowClass}`);
       if (spanElement) {
         spanElement.removeEventListener('mouseenter', expandBoxImg);
         spanElement.removeEventListener('mouseleave', collpsBoxImg);
       }
+    };
+
+    if (mediaQuery.matches) {
+      addHoverEvents();
+    }
+
+    const handleMediaChange = (e) => {
+      if (e.matches) {
+        addHoverEvents();
+      } else {
+        removeHoverEvents();
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    return () => {
+      removeHoverEvents();
+      mediaQuery.removeEventListener('change', handleMediaChange);
     };
   }, [rowClass]);
 
@@ -54,12 +79,11 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
         <p className="text-5xl text-black">{title}</p>
       </div>
       <div className="p-4 flex flex-col justify-end ">
-        <div className='revelCover'>
-          <div ref={compresDivRef} className='revelDiv'>
-            <div className="revelImg">
-              {/* <img src='designer_box.jpg' alt="Designer Box" className='object-cover h-full w-auto' /> */}
+        <div className='md:revelCover relative'>
+          <div ref={compresDivRef} className='md:revelDiv relative'>
+            <div className='md:revelImg relative'>
               <video
-                className='object-cover h-full w-auto'
+                className='md:object-cover md:h-full md:w-auto'
                 src={videoSrc}
                 autoPlay
                 loop

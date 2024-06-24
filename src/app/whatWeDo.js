@@ -34,7 +34,7 @@ function WhatWeDo() {
       title: 'Prepare a quote for approval based on your needs',
       description: 'Once we understand your needs, we will prepare a free, detailed quote, followed by a formal contract to start the process.'
     },
-    // Add more rows data here as needed
+  
   ];
 
   return (
