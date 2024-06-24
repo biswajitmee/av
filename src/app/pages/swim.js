@@ -3,14 +3,14 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 function Swim() {
-    const oneShowcaseRef = useRef(null);
+    const sevenShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showOneShowcase = () => {
-            gsap.fromTo(oneShowcaseRef.current,
+        const showSevenShowcase = () => {
+            gsap.fromTo(sevenShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.5, opacity:1 }
             );
@@ -28,8 +28,15 @@ function Swim() {
 
         };
 
-        const hideOneShowcase = () => {
-            gsap.to(oneShowcaseRef.current,
+        const hideSevenShowcase = () => {
+
+
+            gsap.killTweensOf(sevenShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.to(sevenShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
@@ -38,22 +45,22 @@ function Swim() {
             );
         };
 
-        const spanElement = document.querySelector('.seven span');
+        const spanElement = document.querySelector('.seven');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showOneShowcase);
-            spanElement.addEventListener('mouseleave', hideOneShowcase);
+            spanElement.addEventListener('mouseenter', showSevenShowcase);
+            spanElement.addEventListener('mouseleave', hideSevenShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showOneShowcase);
-                spanElement.removeEventListener('mouseleave', hideOneShowcase);
+                spanElement.removeEventListener('mouseenter', showSevenShowcase);
+                spanElement.removeEventListener('mouseleave', hideSevenShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/swim_bg.jpg')] hidden">
+        <div ref={sevenShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/swim_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl text-white'>
                     Swim

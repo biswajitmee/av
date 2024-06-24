@@ -3,14 +3,14 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 function Outdoors() {
-    const oneShowcaseRef = useRef(null);
+    const tenShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showOneShowcase = () => {
-            gsap.fromTo(oneShowcaseRef.current,
+        const showTenShowcase = () => {
+            gsap.fromTo(tenShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.5, opacity:1 }
             );
@@ -28,8 +28,15 @@ function Outdoors() {
 
         };
 
-        const hideOneShowcase = () => {
-            gsap.to(oneShowcaseRef.current,
+        const hideTenShowcase = () => {
+
+
+            gsap.killTweensOf(tenShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.to(tenShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
@@ -38,22 +45,22 @@ function Outdoors() {
             );
         };
 
-        const spanElement = document.querySelector('.ten span');
+        const spanElement = document.querySelector('.ten');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showOneShowcase);
-            spanElement.addEventListener('mouseleave', hideOneShowcase);
+            spanElement.addEventListener('mouseenter', showTenShowcase);
+            spanElement.addEventListener('mouseleave', hideTenShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showOneShowcase);
-                spanElement.removeEventListener('mouseleave', hideOneShowcase);
+                spanElement.removeEventListener('mouseenter', showTenShowcase);
+                spanElement.removeEventListener('mouseleave', hideTenShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/outdoors_bg.jpg')] hidden">
+        <div ref={tenShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/outdoors_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl text-white'>
                 Outdoors

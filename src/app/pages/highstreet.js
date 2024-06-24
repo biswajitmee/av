@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 function Highstreet() {
-    const oneShowcaseRef = useRef(null);
+    const fiveShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showOneShowcase = () => {
-            gsap.fromTo(oneShowcaseRef.current,
+        const showfiveShowcase = () => {
+            gsap.fromTo(fiveShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
-                { display: 'block', duration: 0.5, opacity:1 }
+                { display: 'block', duration: 0.1, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
@@ -28,8 +28,15 @@ function Highstreet() {
 
         };
 
-        const hideOneShowcase = () => {
-            gsap.to(oneShowcaseRef.current,
+        const hideFiveShowcase = () => {
+
+
+            gsap.killTweensOf(fiveShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.to(fiveShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
@@ -38,22 +45,22 @@ function Highstreet() {
             );
         };
 
-        const spanElement = document.querySelector('.five span');
+        const spanElement = document.querySelector('.five');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showOneShowcase);
-            spanElement.addEventListener('mouseleave', hideOneShowcase);
+            spanElement.addEventListener('mouseenter', showfiveShowcase);
+            spanElement.addEventListener('mouseleave', hideFiveShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showOneShowcase);
-                spanElement.removeEventListener('mouseleave', hideOneShowcase);
+                spanElement.removeEventListener('mouseenter', showfiveShowcase);
+                spanElement.removeEventListener('mouseleave', hideFiveShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/highstreet_bg.jpg')] hidden">
+        <div ref={fiveShowcaseRef} className="showcase bg-red-500 bg-[url('/highstreet_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl text-white'>
                 High Street

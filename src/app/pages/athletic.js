@@ -3,16 +3,16 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 function Athletic() {
-    const oneShowcaseRef = useRef(null);
+    const sixShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showOneShowcase = () => {
-            gsap.fromTo(oneShowcaseRef.current,
+        const showSixShowcase = () => {
+            gsap.fromTo(sixShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
-                { display: 'block', duration: 0.9, opacity:1 }
+                { display: 'block', duration: 0.1, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
@@ -28,38 +28,40 @@ function Athletic() {
 
         };
 
-        const hideOneShowcase = () => {
-            gsap.to(oneShowcaseRef.current,
+        const hideSixShowcase = () => {
+
+
+            gsap.killTweensOf(sixShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.to(sixShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
             gsap.to(compresDivRef.current,
                 { width: '0%', duration: 1, ease: "power4.out" }
             );
-
-            gsap.fromTo(oneShowcaseRef.current,
-               
-                { display: 'block', duration: 0.9, opacity:1 },
-                { display: 'none', opacity:0, duration: 0.5, }
-            );
         };
 
-        const spanElement = document.querySelector('.six span');
+
+        const spanElement = document.querySelector('.six');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showOneShowcase);
-            spanElement.addEventListener('mouseleave', hideOneShowcase);
+            spanElement.addEventListener('mouseenter', showSixShowcase);
+            spanElement.addEventListener('mouseleave', hideSixShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showOneShowcase);
-                spanElement.removeEventListener('mouseleave', hideOneShowcase);
+                spanElement.removeEventListener('mouseenter', showSixShowcase);
+                spanElement.removeEventListener('mouseleave', hideSixShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/athletics_bg.jpg')] hidden">
+        <div ref={sixShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/athletics_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl text-white'>
                 Athletics
