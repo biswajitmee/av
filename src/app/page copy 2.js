@@ -13,16 +13,12 @@ import Lounge from './pages/lounge';
 import CustomCursor from './pages/customCursor';
 import LogoScroller from './brandHorizentalAnimation';
 import WhatWeDo from './whatWeDo';
-import MenuAnimation from './menu';
-
-
+ 
+ 
 
 export default function Home() {
   const main = useRef();
   const smoother = useRef();
-
-
-
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -30,25 +26,9 @@ export default function Home() {
         smooth: 2,
         effects: true,
       });
-
-
-
-
     }, main);
     return () => ctx.revert();
-
-
-
-
-
   }, []);
-
-
-
-
-
-
-
 
   return (
     <>
@@ -56,11 +36,10 @@ export default function Home() {
       <div id="smooth-wrapper" ref={main}>
         <div id="smooth-content">
 
-          <nav className="absolute container z-50 mt-3">
+          <nav className="absolute container z-50 mt-8">
             <div className="relative container mx-auto flex items-center justify-between">
-              <div className="absolute left-0  h-12 flex items-center justify-center">
-                {/* <a href="#" className="menuButton" onClick={handleMenuClick}>Menu</a> */}
-                <MenuAnimation />
+              <div className="absolute left-0 w-24 h-12 flex items-center justify-center">
+                <a href="#" className="menuButton">Menu</a>
               </div>
               <div className="w-24 h-12 mx-auto flex items-center justify-center">
                 <img src='./logo_av.svg' alt="Logo" />
@@ -111,24 +90,22 @@ export default function Home() {
 
 
           <div className="ShowCaseSection">
-            <div className="showcase w-full h-full">
-              <div className='leftBar'></div>
-              <div className='righttBar'></div>
-              <div className='topBar'></div>
-              <div className='bottomBar'></div>
-              <div className="" >
-                <div className="">
-                  <video
-                    className="w-full h-full object-cover"
-                    src="bg_video.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
-                </div>
+
+
+           
+              <div className="showcase w-full h-full ">
+                <video
+                  className="w-full h-full object-cover"
+                  src="bg_video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
               </div>
-            </div>
+          
+
+
             <Designer />
             <Casual />
             <Athleisure />
@@ -137,15 +114,21 @@ export default function Home() {
 
 
           <div className="ScrollSection bg-white pt-5 pb-5 ">
+
             <LogoScroller />
             <p className="flex justify-center items-center text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl h-60 sm:h-96 md:h-96">
               Odds are you’ve worn a<br /> product we’ve made
             </p>
+
+                    
             <WhatWeDo />
+ 
+  
+
           </div>
 
-      
 
+          <div className='h-96'> customer curser not working here </div>
         </div>
       </div>
     </>

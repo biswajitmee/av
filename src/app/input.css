@@ -167,20 +167,44 @@ body {
   }
 
 
-  .menuButton {
-    padding: 5px 20px;
+  .openMenubtn {
+    text-align: center;
+    width: 75px;
+    padding: 3px 10px;
     background-color: #28262F;
     backdrop-filter: blur(10px);
     color: #fff;
-    font-size: 12px;
+    font-size: 11px;
     border-radius: 50px;
     border: 1px solid rgba(168, 168, 168, 0.034);
+    margin-left: 20px;
   }
 
-  .menuButton:hover {
+  .openMenubtn:hover {
     border: 1px solid #fff;
     transition: border 0.3s ease;
   }
+
+  .closeMenubtn span{ font-size: 10px;}
+  .closeMenubtn {
+    width: 75px;
+    text-align: center;
+    padding: 3px 10px;
+    background-color: #e1e1e1;
+    backdrop-filter: blur(10px);
+    color: #000;
+    font-size: 11px;
+    border-radius: 50px;
+    border: 1px solid rgba(168, 168, 168, 0.034);
+    margin-left: 20px;
+  }
+
+  .closeMenubtn:hover {
+    border: 1px solid #fff;
+    transition: border 0.3s ease;
+  }
+
+
 
   .schdule {
     padding: 12px 15px;
@@ -216,6 +240,7 @@ body {
     padding: 9px 0px;
 
   }
+/* nav{  mix-blend-mode: difference;} */
 
   .ShowCaseSection {
     position: relative;
@@ -230,10 +255,9 @@ body {
     position: absolute;
     background-size: cover;
 
-
   }
 
- 
+
 
   .sansita {
     font-family: "Sansita", sans-serif;
@@ -270,13 +294,13 @@ body {
   .bordr {
     border: 1px solid #CECECE;
   }
- 
+
 
   .whtdo {
     font-family: "Archivo", sans-serif;
   }
 
- 
+
 
   .revelCover {
     width: 100%;
@@ -284,14 +308,14 @@ body {
     position: relative;
     right: 0;
   }
-  
+
   .revelDiv {
     overflow: hidden;
     position: relative;
-    width: 100%; 
-    bottom: 0; 
+    width: 100%;
+    bottom: 0;
   }
-  
+
   .revelImg {
     width: 100%;
     height: 300px;
@@ -299,20 +323,59 @@ body {
     bottom: 0;
     right: 0;
   }
-  
+
   .revelImg img {
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  
+
   .revelImg video {
     position: absolute;
     bottom: 0;
     right: 0;
   }
+
+
+  .test {
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    overflow: hidden;
+  }
+
+
+
  
 
+  .small {
+    position: absolute;
+    width: 30vw;
+    height: 80vh;
+    margin: auto;
+    left: 38%;
+    top: 10%;
+    /* bottom: 10%;
+    right: 35%; */
+    overflow: hidden;
+    transition: width 2s, height 2s;
+    border-radius: 8px;
+  }
+  
+  .big {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: -116%;
+    top: -10%;
+  }
+  
+
+
+  
+ 
+  
+  
 
 
 

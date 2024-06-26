@@ -10,6 +10,14 @@ function Casual() {
 
     useEffect(() => {
         const showtwoShowcase = () => {
+
+
+            
+            gsap.killTweensOf(twoShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+            
             gsap.fromTo(twoShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.1, opacity:1 }
