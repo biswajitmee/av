@@ -748,6 +748,10 @@ video {
   height: 100vh;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .h-full{
   height: 100%;
 }
@@ -774,6 +778,10 @@ video {
 
 .grow{
   flex-grow: 1;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-1{
@@ -835,11 +843,6 @@ video {
 .bg-indigo-500{
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
-}
-
-.bg-orange-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 
 .bg-orange-500{
@@ -992,6 +995,24 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
 body {
   cursor: none;
 }
@@ -1082,7 +1103,7 @@ body a:hover .custom-cursor .inner-dot,
 .openMenubtn {
   text-align: center;
   width: 75px;
-  padding: 3px 10px;
+  padding: 3px 10px 4px;
   background-color: #28262F;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1105,7 +1126,7 @@ body a:hover .custom-cursor .inner-dot,
 .closeMenubtn {
   width: 75px;
   text-align: center;
-  padding: 3px 10px;
+  padding: 3px 10px 4px;
   background-color: #e1e1e1;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1122,13 +1143,12 @@ body a:hover .custom-cursor .inner-dot,
 }
 
 .schdule {
-  padding: 15px 22px;
+  padding: 12px 25px;
   border-radius: 5px;
   background-color: #FFE700;
   color: #000;
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 1px;
 }
 
 .leftPanel {
@@ -1138,7 +1158,7 @@ body a:hover .custom-cursor .inner-dot,
 .leftPanel a {
   font-size: 14px;
   border-radius: 50px;
-  padding: 7px 18px;
+  padding: 5px 18px 7px;
   background-color: rgba(55, 50, 70, 0.703);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1179,7 +1199,13 @@ nav {
   left: calc(34vw + 0px);
   top: 10vh;
   height: 80vh;
+  overflow: hidden;
   display: none;
+}
+
+.cornerBox{
+  position: absolute;
+  width: 100%;
 }
 
 .sansita {
@@ -1247,16 +1273,29 @@ nav {
   top: 0;
 }
 
-.whitesppace {
-  position: absolute;
-  width: 100vw;
+.leftPanel2 {
   height: 100vh;
-  background-color: #ffffff;
-  z-index: -1;
+  margin-left:-250px ;
 }
 
-.leftPanel2{
-  margin-left:-250px ;
+.leftPanel2 a {
+  font-size: 14px;
+  border-radius: 50px;
+  padding: 7px 18px;
+  background-color: rgba(55, 50, 70, 0.703);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 168, 168, 0.034);
+}
+
+.leftPanel2 a:hover {
+  border: 1px solid #fff;
+  transition: border 0.3s ease;
+  background-color: rgba(52, 43, 76, 0.233);
+}
+
+.leftPanel2 .left_nav {
+  padding: 9px 0px;
 }
 
 :root {

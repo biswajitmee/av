@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
@@ -15,14 +15,23 @@ import LogoScroller from './brandHorizentalAnimation';
 import WhatWeDo from './whatWeDo';
 import MenuAnimation from './menu';
 
-
+const images = {
+  Designer: 'designer_box.jpg',
+  Casual: 'casual_box.jpg',
+  Athleisure: 'athleisure_box.jpg',
+  Lounge: 'lounge_box.jpg',
+  HighStreet: 'highstreet_box.jpg',
+  Athletic: 'athletics_box.jpg',
+  Swim: 'swim_box.jpg',
+  Denim: 'denim_box.jpg',
+  Fullfashion: 'fullfashion_box.jpg',
+  Outdoors: 'outdoors_box.jpg'
+};
 
 export default function Home() {
   const main = useRef();
   const smoother = useRef();
-
-
-
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -30,49 +39,31 @@ export default function Home() {
         smooth: 2,
         effects: true,
       });
-
-
-
-
     }, main);
     return () => ctx.revert();
-
-
-
-
-
   }, []);
-
-
-
-
-
-
-
 
   return (
     <>
       <CustomCursor />
       <div id="smooth-wrapper" ref={main}>
         <div id="smooth-content">
-
           <nav className="absolute container z-50 mt-3">
             <div className="relative container mx-auto flex items-center justify-between">
-              <div className="absolute left-0  h-12 flex items-center justify-center">
-                {/* <a href="#" className="menuButton" onClick={handleMenuClick}>Menu</a> */}
+              <div className="absolute left-0 h-12 flex items-center justify-center">
                 <MenuAnimation />
               </div>
               <div className="logo w-24 h-12 mx-auto flex items-center justify-center">
                 <img src='./logo_av.svg' alt="Logo" />
               </div>
-              <div className="absolute right-0   mr-4 h-12 flex items-center justify-center">
+              <div className="absolute right-0 mr-4 h-12 flex items-center justify-center">
                 <a href="#" className="schdule">Schedule a call</a>
               </div>
             </div>
           </nav>
 
-          <div class="leftPanel absolute inset-0 flex items-center w-64   z-40">
-            <div class="pl-3 ">
+          <div className="leftPanel absolute inset-0 flex items-center w-64 h-full z-40">
+            <div className="pl-3 ">
               <div className="one left_nav">
                 <a>Designer</a>
               </div>
@@ -80,104 +71,81 @@ export default function Home() {
                 <a>Casual</a>
               </div>
               <div className="three left_nav">
-                <a>Athleisure </a>
+                <a>Athleisure</a>
               </div>
               <div className="four left_nav">
-                <a>Lounge </a>
+                <a>Lounge</a>
               </div>
               <div className="five left_nav">
-                <a>High Street </a>
+                <a>High Street</a>
               </div>
               <div className="six left_nav">
-                <a>  Athletic</a>
+                <a>Athletic</a>
               </div>
               <div className="seven left_nav">
-                <a>Swim </a>
+                <a>Swim</a>
               </div>
               <div className="eight left_nav">
-                <a> Denim</a>
+                <a>Denim</a>
               </div>
               <div className="nine left_nav">
-                <a> Full-fashion </a>
+                <a>Full-fashion</a>
               </div>
               <div className="ten left_nav">
-                <a>Outdoors </a>
+                <a>Outdoors</a>
               </div>
               <div className="eleven left_nav">
-                <a> Others </a>
+                <a>Others</a>
               </div>
             </div>
           </div>
 
-
-
-
-          <div class="leftPanel2 absolute inset-0 flex items-center w-64   z-40">
-            <div class="pl-3 ">
-              <div className="left_nav">
-                <a>Designer</a>
-              </div>
-              <div className="left_nav">
-                <a>Casual</a>
-              </div>
-              <div className="left_nav">
-                <a>Athleisure </a>
-              </div>
-              <div className="left_nav">
-                <a>Lounge </a>
-              </div>
-              <div className="left_nav">
-                <a>High Street </a>
-              </div>
-              <div className="left_nav">
-                <a>  Athletic</a>
-              </div>
-              <div className="left_nav">
-                <a>Swim </a>
-              </div>
-              <div className="left_nav">
-                <a> Denim</a>
-              </div>
-              <div className="left_nav">
-                <a> Full-fashion </a>
-              </div>
-              <div className="left_nav">
-                <a>Outdoors </a>
-              </div>
-              <div className="left_nav">
-                <a> Others </a>
-              </div>
+          <div className="leftPanel2 absolute inset-0 flex items-center w-64 z-40">
+            <div className="pl-3">
+              {Object.keys(images).map((item, index) => (
+                <div
+                  key={index}
+                  onMouseEnter={() => setHoveredItem(item)}
+                  onMouseLeave={() => setHoveredItem(null)}
+                  className="left_nav"
+                >
+                  <a>{item}</a>
+                </div>
+              ))}
             </div>
           </div>
-
-
-
 
           <div className="ShowCaseSection">
-            <div className="showcase w-full h-full inset-0 ">
+            <div className="showcase w-full h-full inset-0">
+              <div className="leftBar"></div>
+              <div className="righttBar"></div>
+              <div className="topBar"></div>
+              <div className="bottomBar"></div>
 
-              <div className='leftBar'></div>
-              <div className='righttBar'></div>
-              <div className='topBar'></div>
-              <div className='bottomBar'></div>
-
-              <div className='cornerShowcase'>
-
-                <div className="absolute top-0 left-0">
-                  <img src="corner-left-top.svg" alt="top-left corner" className="w-8 h-8" />
+              <div className="cornerShowcase z-50">
+                <div className="absolute top-0 left-0 z-50">
+                  <img src="corner-left-top-2.svg" alt="top-left corner" className="w-8 h-8" />
                 </div>
-                <div className="absolute top-0 right-0">
-                  <img src="corner-right-top.svg" alt="top-right corner" className="w-8 h-8" />
+                <div className="absolute top-0 right-0 z-50">
+                  <img src="corner-right-top-2.svg" alt="top-right corner" className="w-8 h-8" />
                 </div>
-                <div className="absolute bottom-0 left-0">
-                  <img src="corner-left-bottom.svg" alt="bottom-left corner" className="w-8 h-8" />
+                <div className="absolute bottom-0 left-0 z-50">
+                  <img src="corner-left-bottom-2.svg" alt="bottom-left corner" className="w-8 h-8" />
                 </div>
-                <div className="absolute bottom-0 right-0">
-                  <img src="corner-right-bottom.svg" alt="bottom-right corner" className="w-8 h-8" />
+                <div className="absolute bottom-0 right-0 z-50">
+                  <img src="corner-right-bottom-2.svg" alt="bottom-right corner" className="w-8 h-8" />
                 </div>
 
+                {Object.keys(images).map((item, index) => (
+                  <img
+                    key={index}
+                    src={images[item]}
+                    alt={item}
+                    className={`cornerBox absolute w-64 h-auto transition-opacity duration-300 ${hoveredItem === item ? 'opacity-100' : 'opacity-0'}`}
+                    style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                  />
+                ))}
               </div>
-
 
               <video
                 className="w-full h-full object-cover coverVideo"
@@ -187,9 +155,6 @@ export default function Home() {
                 muted
                 playsInline
               />
-
-
-
             </div>
             <Designer />
             <Casual />
@@ -197,8 +162,7 @@ export default function Home() {
             <Lounge />
           </div>
 
-
-          <div className="ScrollSection bg-white pt-5 pb-5 ">
+          <div className="ScrollSection bg-white pt-5 pb-5">
             <LogoScroller />
             <p className="flex justify-center items-center text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl h-60 sm:h-96 md:h-96">
               Odds are you’ve worn a<br /> product we’ve made
@@ -206,8 +170,8 @@ export default function Home() {
             <WhatWeDo />
           </div>
 
-          <div className='hidden md:block h-48 bg-orange-500 text-8xl	text-neutral-900'> for dekstop video</div>
-          <div className='block md:hidden h-48 bg-indigo-500 text-8xl	text-neutral-900'> for mobile view</div>
+          <div className='hidden md:block h-48 bg-orange-500 text-8xl text-neutral-900'>for dekstop video</div>
+          <div className='block md:hidden h-48 bg-indigo-500 text-8xl text-neutral-900'>for mobile view</div>
         </div>
       </div>
     </>

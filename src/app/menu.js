@@ -6,68 +6,50 @@ const MenuAnimation = () => {
 
   // Define the open timeline
   const openMenuTimeline = () => {
-    gsap.to('.leftPanel', {
-      left: '-150px',
-      duration: 0.5
-    });
+ 
+
+    gsap.fromTo('.leftPanel',      
+      { zIndex:'10', opacity:1  },
+      { opacity:0, duration:0.5, zIndex:-10  },
+     );
 
     gsap.fromTo('.leftBar', {
       zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff",
     }, {
-       position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", duration: 1, width: '34vw', ease: "power4.in",
+      delay:0.5, position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", duration: 1, width: '34vw', ease: "power2.in",
     });
 
     gsap.fromTo('.righttBar', {
       zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff",
     }, {
-    position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", duration: 1, width: '34vw',ease: "power4.in",
+      delay:0.5, position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", duration: 1, width: '34vw',ease: "power2.in",
     });
 
     gsap.fromTo('.topBar', {
       zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff",
     }, {
-       position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power4.in",
+      delay:0.5,  position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power2.in",
     });
 
     gsap.fromTo('.bottomBar', {
       position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff",
     }, {
-       zIndex: '30', position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power4.in",
+      delay:0.5,  zIndex: '30', position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power2.in",
     });
+
+    gsap.fromTo('.leftPanel2', { 
+      marginLeft:'-250px'
+    }, {
+        delay:1.1,marginLeft:'15px', duration:1, ease: "power4.out",
+    });
+
+
 
     gsap.fromTo('.cornerShowcase',
       {display:'none'},
-       {delay:1, display:'block'});
+       {delay:1.5, display:'block'});
 
-    // gsap.to({}, {
-   
-    //   delay: 0.9,
-    //   onComplete: function () {
-    //     const smallElement = document.getElementById("small");
-    //     smallElement.classList.add("small");
-    //     gsap.to(smallElement, { scale: 0.99, duration: 0.1 });  // Add scale animation
-    //   }
-    // });
-    //   gsap.to({}, {
-      
-    //     delay:0.9,
-    //     onComplete: function() {
-    //       document.getElementById("big").classList.add("big");
-    //     }
-    //   });
-
-      // gsap.to('.small',          
-      //   {scale:0.2, delay:1.1, duration:2});
-
-
-      // gsap.to({}, {
-      //   duration: 0,
-      //   delay:0.5,
-      //   onComplete: function() {
-      //     document.getElementById("whitesppace").classList.add("whitesppace");
-      //   }
-      // });
-
+     
 
     gsap.to('.openMenubtn', {
       opacity: 0,
@@ -82,10 +64,10 @@ const MenuAnimation = () => {
 
   // Define the close timeline
   const closeMenuTimeline = () => {
-    gsap.to('.leftPanel', {
-      left: '20px',
-      duration: 0.5
-    });
+    gsap.fromTo('.leftPanel',      
+       { zIndex:'-10', opacity:0  },
+       {delay:1.5, opacity:1, duration:0.8, zIndex:10  },
+      );
 
     gsap.fromTo('.cornerShowcase',
       {delay:0,display:'block'},
@@ -116,37 +98,10 @@ const MenuAnimation = () => {
     });
 
    
-
-
-    // gsap.to({}, {
-    //   duration: 0,
-    //   delay: 0,
-    //   onComplete: function () {
-    //     const smallElement = document.getElementById("small");
-    //     gsap.to(smallElement, {
-    //       scale: 1, // Reset scale to default
-    //       duration: 0,
-    //       onComplete: function() {
-    //         smallElement.classList.remove("small");
-    //       }
-    //     });
-    //   }
-    // });
-    //   gsap.to({}, {
-    //     duration: 0,
-    //     delay: 0,
-    //     onComplete: function() {
-    //       document.getElementById("big").classList.remove("big");
-    //     }
-    //   });
-
-      // gsap.to({}, {
-      //   duration: 0,
-      //   delay:0.5,
-      //   onComplete: function() {
-      //     document.getElementById("whitesppace").classList.remove("whitesppace");
-      //   }
-      // });
+    gsap.fromTo('.leftPanel2', 
+      {marginLeft:'15px',}, 
+      {delay:0.4, marginLeft:'-250px', duration:0.5,});
+ 
 
 
 
