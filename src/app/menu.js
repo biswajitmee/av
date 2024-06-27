@@ -13,6 +13,17 @@ const MenuAnimation = () => {
       { opacity:0, duration:0.5, zIndex:-10  },
      );
 
+     gsap.fromTo('.intro',      
+      { opacity:1  },
+      { opacity:0, duration:0.5,  },
+     );
+     gsap.fromTo('.introHeading',      
+      { opacity:1  },
+      { opacity:0, duration:0.5,  },
+     );
+
+
+
     gsap.fromTo('.leftBar', {
       zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff",
     }, {
@@ -68,6 +79,18 @@ const MenuAnimation = () => {
        { zIndex:'-10', opacity:0  },
        {delay:1.5, opacity:1, duration:0.8, zIndex:10  },
       );
+
+      gsap.fromTo('.intro',      
+        { opacity:0  },
+        { delay:0.5, opacity:1, duration:0.5,  },
+       );
+       gsap.fromTo('.introHeading',      
+        { opacity:0  },
+        {delay:0.5, opacity:1, duration:0.5,  },
+       );
+
+       
+
 
     gsap.fromTo('.cornerShowcase',
       {delay:0,display:'block'},

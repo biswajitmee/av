@@ -147,14 +147,25 @@ export default function Home() {
                 ))}
               </div>
 
-              <video
-                className="w-full h-full object-cover coverVideo"
-                src="bg_video.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
+              <div className='videoCover'>
+                <video
+                  className="w-full h-full object-cover coverVideo"
+                  src="bg_video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+
+                <div className='intro'>Since 2006, we’ve been manufacturing clothing in Los Angeles for the 
+                  most innovative designer brands, creating, building, and delivering apparel worth talking about.</div>
+
+                  <div className='introHeading'>We produce 
+                  luxury cloth</div>
+
+              </div>
+
+
             </div>
             <Designer />
             <Casual />
