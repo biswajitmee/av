@@ -14,26 +14,60 @@ const MenuAnimation = () => {
     gsap.fromTo('.leftBar', {
       zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff",
     }, {
-      delay: 0.5, position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", duration: 1, width: '33vw'
+       position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", duration: 1, width: '34vw', ease: "power4.in",
     });
 
     gsap.fromTo('.righttBar', {
       zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff",
     }, {
-      delay: 0.5, position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", duration: 1, width: '33vw'
+    position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", duration: 1, width: '34vw',ease: "power4.in",
     });
 
     gsap.fromTo('.topBar', {
       zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      delay: 0.5, position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,
+       position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power4.in",
     });
 
     gsap.fromTo('.bottomBar', {
       position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      delay: 0.5, zIndex: '30', position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,
+       zIndex: '30', position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power4.in",
     });
+
+    gsap.fromTo('.cornerShowcase',
+      {display:'none'},
+       {delay:1, display:'block'});
+
+    // gsap.to({}, {
+   
+    //   delay: 0.9,
+    //   onComplete: function () {
+    //     const smallElement = document.getElementById("small");
+    //     smallElement.classList.add("small");
+    //     gsap.to(smallElement, { scale: 0.99, duration: 0.1 });  // Add scale animation
+    //   }
+    // });
+    //   gsap.to({}, {
+      
+    //     delay:0.9,
+    //     onComplete: function() {
+    //       document.getElementById("big").classList.add("big");
+    //     }
+    //   });
+
+      // gsap.to('.small',          
+      //   {scale:0.2, delay:1.1, duration:2});
+
+
+      // gsap.to({}, {
+      //   duration: 0,
+      //   delay:0.5,
+      //   onComplete: function() {
+      //     document.getElementById("whitesppace").classList.add("whitesppace");
+      //   }
+      // });
+
 
     gsap.to('.openMenubtn', {
       opacity: 0,
@@ -53,29 +87,68 @@ const MenuAnimation = () => {
       duration: 0.5
     });
 
+    gsap.fromTo('.cornerShowcase',
+      {delay:0,display:'block'},
+       {delay:0,display:'none'});
+
     gsap.fromTo('.leftBar', {
-      delay: 0.5, position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", width: '33vw'
+     position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", width: '34vw'
     }, {
-      zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff", duration: 1,
+      delay:0.5, zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff", duration: 0.7, ease: "power1.out",
     });
 
     gsap.fromTo('.righttBar', {
-      delay: 0.5, position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", width: '33vw'
+       position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", width: '34vw'
     }, {
-      zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff", duration: 1,
+      delay:0.5,  zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff", duration: 0.7,ease: "power1.out",
     });
 
     gsap.fromTo('.topBar', {
-      delay: 0.5, position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff",
+    position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 1,
+      delay:0.5,  zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 0.7,ease: "power1.out",
     });
 
     gsap.fromTo('.bottomBar', {
-      delay: 0.5, position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff",
+       position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      zIndex: '30', position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 1,
+      delay:0.5,  zIndex: '30', position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 0.7,ease: "power1.out",
     });
+
+   
+
+
+    // gsap.to({}, {
+    //   duration: 0,
+    //   delay: 0,
+    //   onComplete: function () {
+    //     const smallElement = document.getElementById("small");
+    //     gsap.to(smallElement, {
+    //       scale: 1, // Reset scale to default
+    //       duration: 0,
+    //       onComplete: function() {
+    //         smallElement.classList.remove("small");
+    //       }
+    //     });
+    //   }
+    // });
+    //   gsap.to({}, {
+    //     duration: 0,
+    //     delay: 0,
+    //     onComplete: function() {
+    //       document.getElementById("big").classList.remove("big");
+    //     }
+    //   });
+
+      // gsap.to({}, {
+      //   duration: 0,
+      //   delay:0.5,
+      //   onComplete: function() {
+      //     document.getElementById("whitesppace").classList.remove("whitesppace");
+      //   }
+      // });
+
+
 
     gsap.to('.closeMenubtn', {
       opacity: 0,

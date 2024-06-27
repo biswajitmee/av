@@ -185,7 +185,10 @@ body {
     transition: border 0.3s ease;
   }
 
-  .closeMenubtn span{ font-size: 10px;}
+  .closeMenubtn span {
+    font-size: 10px;
+  }
+
   .closeMenubtn {
     width: 75px;
     text-align: center;
@@ -207,11 +210,14 @@ body {
 
 
   .schdule {
-    padding: 12px 15px;
-    border-radius: 8px;
+    padding: 15px 22px;
+    border-radius: 5px;
     background-color: #FFE700;
     color: #000;
     font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+
   }
 
   .leftPanel {
@@ -240,7 +246,11 @@ body {
     padding: 9px 0px;
 
   }
-/* nav{  mix-blend-mode: difference;} */
+
+  nav {
+    mix-blend-mode: difference;
+  }
+
 
   .ShowCaseSection {
     position: relative;
@@ -257,7 +267,13 @@ body {
 
   }
 
-
+.cornerShowcase{  position: absolute;
+                  width: calc(32vw - 17px); 
+                  left: calc(34vw + 0px); 
+                  top: 10vh; 
+                  height: 80vh;
+                display: none;
+                }
 
   .sansita {
     font-family: "Sansita", sans-serif;
@@ -337,45 +353,56 @@ body {
   }
 
 
-  .test {
+  /* .test {
     position: absolute;
     width: 30%;
     height: 80%;
     overflow: hidden;
-  }
+  } */
 
 
 
- 
+
 
   .small {
     position: absolute;
-    width: 30vw;
-    height: 80vh;
+    width: 33vw;
+    height: 82vh;
     margin: auto;
-    left: 38%;
-    top: 10%;
-    /* bottom: 10%;
-    right: 35%; */
+    left: 31.8vw;
+    top: 8.5%; 
     overflow: hidden;
     transition: width 2s, height 2s;
     border-radius: 8px;
+    z-index: 20;
+    
   }
-  
+
   .big {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    left: -116%;
-    top: -10%;
+    left: -98%;
+    top: 0;
+ 
   }
-  
-
-
-  
  
   
   
+  
+
+
+  .whitesppace {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: -1;
+  }
+
+
+
+.leftPanel2{ margin-left:-250px ;}
 
 
 

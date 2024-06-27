@@ -62,10 +62,10 @@ export default function Home() {
                 {/* <a href="#" className="menuButton" onClick={handleMenuClick}>Menu</a> */}
                 <MenuAnimation />
               </div>
-              <div className="w-24 h-12 mx-auto flex items-center justify-center">
+              <div className="logo w-24 h-12 mx-auto flex items-center justify-center">
                 <img src='./logo_av.svg' alt="Logo" />
               </div>
-              <div className="absolute right-0 w-40 mr-4 h-12 flex items-center justify-center">
+              <div className="absolute right-0   mr-4 h-12 flex items-center justify-center">
                 <a href="#" className="schdule">Schedule a call</a>
               </div>
             </div>
@@ -110,24 +110,86 @@ export default function Home() {
           </div>
 
 
+
+
+          <div class="leftPanel2 absolute inset-0 flex items-center w-64   z-40">
+            <div class="pl-3 ">
+              <div className="left_nav">
+                <a>Designer</a>
+              </div>
+              <div className="left_nav">
+                <a>Casual</a>
+              </div>
+              <div className="left_nav">
+                <a>Athleisure </a>
+              </div>
+              <div className="left_nav">
+                <a>Lounge </a>
+              </div>
+              <div className="left_nav">
+                <a>High Street </a>
+              </div>
+              <div className="left_nav">
+                <a>  Athletic</a>
+              </div>
+              <div className="left_nav">
+                <a>Swim </a>
+              </div>
+              <div className="left_nav">
+                <a> Denim</a>
+              </div>
+              <div className="left_nav">
+                <a> Full-fashion </a>
+              </div>
+              <div className="left_nav">
+                <a>Outdoors </a>
+              </div>
+              <div className="left_nav">
+                <a> Others </a>
+              </div>
+            </div>
+          </div>
+
+
+
+
           <div className="ShowCaseSection">
-            <div className="showcase w-full h-full">
+            <div className="showcase w-full h-full inset-0 ">
+
               <div className='leftBar'></div>
               <div className='righttBar'></div>
               <div className='topBar'></div>
               <div className='bottomBar'></div>
-              <div className="" >
-                <div className="">
-                  <video
-                    className="w-full h-full object-cover"
-                    src="bg_video.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  />
+
+              <div className='cornerShowcase'>
+
+                <div className="absolute top-0 left-0">
+                  <img src="corner-left-top.svg" alt="top-left corner" className="w-8 h-8" />
                 </div>
+                <div className="absolute top-0 right-0">
+                  <img src="corner-right-top.svg" alt="top-right corner" className="w-8 h-8" />
+                </div>
+                <div className="absolute bottom-0 left-0">
+                  <img src="corner-left-bottom.svg" alt="bottom-left corner" className="w-8 h-8" />
+                </div>
+                <div className="absolute bottom-0 right-0">
+                  <img src="corner-right-bottom.svg" alt="bottom-right corner" className="w-8 h-8" />
+                </div>
+
               </div>
+
+
+              <video
+                className="w-full h-full object-cover coverVideo"
+                src="bg_video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+
+
+
             </div>
             <Designer />
             <Casual />
@@ -144,8 +206,8 @@ export default function Home() {
             <WhatWeDo />
           </div>
 
-      
-
+          <div className='hidden md:block h-48 bg-orange-500 text-8xl	text-neutral-900'> for dekstop video</div>
+          <div className='block md:hidden h-48 bg-indigo-500 text-8xl	text-neutral-900'> for mobile view</div>
         </div>
       </div>
     </>
