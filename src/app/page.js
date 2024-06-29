@@ -14,7 +14,9 @@ import CustomCursor from './pages/customCursor';
 import LogoScroller from './brandHorizentalAnimation';
 import WhatWeDo from './whatWeDo';
 import MenuAnimation from './menu';
-
+import KeyFeature from './keyFeature';
+import ClientSays from './clientSays';
+ 
 const images = {
   Designer: 'designer_box.jpg',
   Casual: 'casual_box.jpg',
@@ -32,6 +34,7 @@ export default function Home() {
   const main = useRef();
   const smoother = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
+  const menuItems = useRef([]);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -39,8 +42,36 @@ export default function Home() {
         smooth: 2,
         effects: true,
       });
+
+      menuItems.current.forEach((item) => {
+        const underline = item.querySelector('.underline');
+        const textWidth = item.offsetWidth;
+
+
+        item.addEventListener('mouseenter', () => {
+          gsap.fromTo(underline,
+            { width: '0', duration: 0.5, left: 0 },
+            { width: textWidth, duration: 0.5, left: 0 });
+        });
+
+        item.addEventListener('mouseleave', () => {
+          gsap.fromTo(underline,
+            { width: textWidth, duration: 0.5, right: 0 },
+            { width: '0', duration: 0.5, right: 0 }
+          );
+        });
+      });
+
+
     }, main);
     return () => ctx.revert();
+
+
+
+
+
+
+
   }, []);
 
   return (
@@ -102,6 +133,28 @@ export default function Home() {
 
           <div className="leftPanel2 absolute inset-0 flex items-center w-64 z-40">
             <div className="pl-3">
+
+
+              <div className='menuContent'>
+                <li ref={el => menuItems.current[0] = el} className="menuItem">
+                  What We Do
+                  <div className="underline"></div>
+                </li>
+                <li ref={el => menuItems.current[1] = el} className="menuItem">
+                  About Us
+                  <div className="underline"></div>
+                </li>
+                <li ref={el => menuItems.current[2] = el} className="menuItem">
+                  Latest News
+                  <div className="underline"></div>
+                </li>
+                <li ref={el => menuItems.current[3] = el} className="menuItem">
+                  Get in Touch
+                  <div className="underline"></div>
+                </li>
+              </div>
+
+
               {Object.keys(images).map((item, index) => (
                 <div
                   key={index}
@@ -157,11 +210,13 @@ export default function Home() {
                   playsInline
                 />
 
-                <div className='intro'>Since 2006, we’ve been manufacturing clothing in Los Angeles for the 
+                <div className='intro'>Since 2006, we’ve been manufacturing clothing in Los Angeles for the
                   most innovative designer brands, creating, building, and delivering apparel worth talking about.</div>
 
-                  <div className='introHeading'>We produce 
-                  luxury cloth</div>
+                <div className='introHeading'>
+                  <div>We produce </div>
+                  <div className='text-right'>luxury cloth</div>
+                </div>
 
               </div>
 
@@ -178,11 +233,36 @@ export default function Home() {
             <p className="flex justify-center items-center text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl h-60 sm:h-96 md:h-96">
               Odds are you’ve worn a<br /> product we’ve made
             </p>
+            <p className='pl-10 pb-5 text-5xl text-black	'>What we do</p>
             <WhatWeDo />
           </div>
 
-          <div className='hidden md:block h-48 bg-orange-500 text-8xl text-neutral-900'>for dekstop video</div>
-          <div className='block md:hidden h-48 bg-indigo-500 text-8xl text-neutral-900'>for mobile view</div>
+ 
+ 
+          <div class="flex flex-row h-96 bg-orange-400">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+          </div>
+
+
+          <KeyFeature />
+
+
+          <div class="flex flex-row h-96 bg-orange-400">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+            <div>04</div>
+            <div>05</div>
+            <div>06</div>
+          </div>
+
+<ClientSays/>
+
         </div>
       </div>
     </>

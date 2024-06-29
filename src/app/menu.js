@@ -27,25 +27,25 @@ const MenuAnimation = () => {
     gsap.fromTo('.leftBar', {
       zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff",
     }, {
-      delay:0.5, position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", duration: 1, width: '34vw', ease: "power2.in",
+      delay:0.5, position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", duration: 1, width: '34vw', ease: "power4.in",
     });
 
     gsap.fromTo('.righttBar', {
       zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff",
     }, {
-      delay:0.5, position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", duration: 1, width: '34vw',ease: "power2.in",
+      delay:0.5, position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", duration: 1, width: '34vw',ease: "power4.in",
     });
 
     gsap.fromTo('.topBar', {
       zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      delay:0.5,  position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power2.in",
+      delay:0.5,  position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power4.in",
     });
 
     gsap.fromTo('.bottomBar', {
       position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      delay:0.5,  zIndex: '30', position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power2.in",
+      delay:0.5,  zIndex: '30', position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff", duration: 1,ease: "power4.in",
     });
 
     gsap.fromTo('.leftPanel2', { 
@@ -75,9 +75,16 @@ const MenuAnimation = () => {
 
   // Define the close timeline
   const closeMenuTimeline = () => {
+
+
     gsap.fromTo('.leftPanel',      
-       { zIndex:'-10', opacity:0  },
-       {delay:1.5, opacity:1, duration:0.8, zIndex:10  },
+      { zIndex:'-10', opacity:0  },
+      { delay:0.5, opacity:0, zIndex:10  },
+     );
+
+    gsap.fromTo('.leftPanel',      
+       {  opacity:0  },
+       {delay:2, opacity:1, duration:1,  },
       );
 
       gsap.fromTo('.intro',      
@@ -99,31 +106,31 @@ const MenuAnimation = () => {
     gsap.fromTo('.leftBar', {
      position: 'absolute', height: '100vh', left: '0', backgroundColor: "#fff", width: '34vw'
     }, {
-      delay:0.5, zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff", duration: 0.7, ease: "power1.out",
+      delay:0.5, zIndex: '30', position: 'absolute', height: '100vh', left: '0', width: '0px', backgroundColor: "#fff", duration: 1.5, ease: "power3.out",
     });
 
     gsap.fromTo('.righttBar', {
        position: 'absolute', height: '100vh', right: '0', backgroundColor: "#fff", width: '34vw'
     }, {
-      delay:0.5,  zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff", duration: 0.7,ease: "power1.out",
+      delay:0.5,  zIndex: '30', position: 'absolute', height: '100vh', right: '0', width: '0px', backgroundColor: "#fff", duration: 1.5,ease: "power3.out",
     });
 
     gsap.fromTo('.topBar', {
     position: 'absolute', top: '0', height: '10vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      delay:0.5,  zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 0.7,ease: "power1.out",
+      delay:0.5,  zIndex: '30', position: 'absolute', top: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 1.5,ease: "power3.out",
     });
 
     gsap.fromTo('.bottomBar', {
        position: 'absolute', bottom: '0', height: '10vh', width: '100vw', backgroundColor: "#fff",
     }, {
-      delay:0.5,  zIndex: '30', position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 0.7,ease: "power1.out",
+      delay:0.5,  zIndex: '30', position: 'absolute', bottom: '0', height: '0vh', width: '100vw', backgroundColor: "#fff", duration: 1.5,ease: "power3.out",
     });
 
    
     gsap.fromTo('.leftPanel2', 
       {marginLeft:'15px',}, 
-      {delay:0.4, marginLeft:'-250px', duration:0.5,});
+      {delay:0.2, marginLeft:'-250px', duration:0.4,});
  
 
 
