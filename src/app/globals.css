@@ -750,6 +750,10 @@ video {
   flex: 1 1 0%;
 }
 
+.flex-grow{
+  flex-grow: 1;
+}
+
 .grow{
   flex-grow: 1;
 }
@@ -942,6 +946,10 @@ video {
   padding-left: 0.75rem;
 }
 
+.pl-6{
+  padding-left: 1.5rem;
+}
+
 .pr-0{
   padding-right: 0px;
 }
@@ -954,20 +962,8 @@ video {
   padding-top: 6rem;
 }
 
-.pt-40{
-  padding-top: 10rem;
-}
-
 .pt-5{
   padding-top: 1.25rem;
-}
-
-.pl-5{
-  padding-left: 1.25rem;
-}
-
-.pl-6{
-  padding-left: 1.5rem;
 }
 
 .text-left{
@@ -1410,24 +1406,24 @@ nav {
   width: 500px;
 }
 
-.CardDeesignMob {
-  border-radius: 20px;
-  width: 100%;
-}
-
 .cardPhoto {
   position: relative;
 }
 
 .photoCover {
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 100px;
   background-color: #8571FD;
-  left: calc(50% - 60px);
-  margin-top: -120px;
+  left: calc(50% - 90px);
+  margin-top: -140px;
   border: 10px solid #fff;
+  overflow: hidden;
+}
+
+.cardContent{
+  color: #000;
 }
 
 :root {
@@ -1464,11 +1460,6 @@ nav {
   .sm\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .sm\:CardDeesign {
-    border-radius: 20px;
-    width: 500px;
   }
 }
 
@@ -1556,11 +1547,6 @@ nav {
     color: #000;
     padding-bottom: 50px;
   }
-
-  .md\:CardDeesign {
-    border-radius: 20px;
-    width: 500px;
-  }
 }
 
 @media (min-width: 1024px){
@@ -1603,11 +1589,6 @@ nav {
     border-left: 1px solid #8571FD;
     color: #000;
     padding-bottom: 50px;
-  }
-
-  .lg\:CardDeesign {
-    border-radius: 20px;
-    width: 500px;
   }
 }
 

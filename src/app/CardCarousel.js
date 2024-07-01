@@ -49,29 +49,36 @@ const CardCarousel = () => {
   const colors = ['#FFC0CB', '#ADD8E6', '#98FB98', '#FFA07A', '#FFFFE0', '#FFC0CB', '#ADD8E6', '#98FB98'];
 
   const cards = [
-    { id: 0, content: 'Card 1', name: 'Kate A', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[0] },
-    { id: 1, content: 'Card 2', name: 'Kate B', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[1] },
-    { id: 2, content: 'Card 3', name: 'Kate C', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[2] },
-    { id: 3, content: 'Card 4', name: 'Kate D', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[3] },
-    { id: 4, content: 'Card 5', name: 'Kate E', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[4] },
-    { id: 5, content: 'Card 6', name: 'Kate C', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[5] },
-    { id: 6, content: 'Card 7', name: 'Kate D', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[6] },
-    { id: 7, content: 'Card 8', name: 'Kate E', imgSrc: 'https://via.placeholder.com/150', width: '500px', height: '470px', bg: colors[7] },
+    { id: 0, content: 'I’m your biggest fan and love AVmade.com, but I\'m looking to create products that are not available on your marketplace. Can you guys please help us? It will mean the world to us. Thanks.', name: 'Kate A', imgSrc: 'profile1.jpg', width: '500px', height: '470px', bg: colors[0] },
+    { id: 1, content: 'I’m your biggest fan and love AVmade.com, but I\'m looking to create products that are not available on your marketplace. Can you guys please help us? It will mean the world to us. Thanks.', name: 'Kate B', imgSrc: 'profile2.jpg', width: '500px', height: '470px', bg: colors[1] },
+    { id: 2, content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', name: 'Kate C', imgSrc: 'profile1.jpg', width: '500px', height: '470px', bg: colors[2] },
+    { id: 3, content: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,', name: 'Kate D', imgSrc: 'profile2.jpg', width: '500px', height: '470px', bg: colors[3] },
+    { id: 4, content: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book.', name: 'Kate E', imgSrc: 'profile1.jpg', width: '500px', height: '470px', bg: colors[4] },
+    { id: 5, content: 'It has survived not only five centuries, but also the leap into electronic typesetting,', name: 'Kate C', imgSrc: 'profile2.jpg', width: '500px', height: '470px', bg: colors[5] },
+    { id: 6, content: 'remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,', name: 'Kate D', imgSrc: 'profile1.jpg', width: '500px', height: '470px', bg: colors[6] },
+    { id: 7, content: 'and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', name: 'Kate E', imgSrc: 'profile2.jpg', width: '500px', height: '470px', bg: colors[7] },
   ];
 
   return (
     <div className="container mx-auto px-10">
       <Slider {...settings}>
         {cards.map((card) => (
-          <div key={card.id} className="p-4 pt-20" style={{ width: '100%' }}> 
-            <div className="CardDeesign p-12" style={{ width: '100%', maxWidth: '500px', height: card.height, backgroundColor: card.bg }}>
-              <div className='cardPhoto'>
-                <div className='photoCover'>{card.name}</div>
-              </div>
-              <div className='cardContent'> </div>
-              <div className='cardName'> </div>
-            </div>
-          </div>
+       <div key={card.id} className="p-4 pt-20" style={{ width: '100%' }}> 
+       <div className="CardDeesign p-12 flex flex-col justify-between" style={{ width: '100%', maxWidth: '500px', height: card.height, backgroundColor: card.bg }}>
+        
+      
+         <div className='cardPhoto'>
+           <div className='photoCover' style={{ backgroundImage: `url(${card.imgSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+         </div>
+         <div className='flex-grow flex items-center'>
+           <div className='cardContent text-center'>
+             {card.content}
+           </div>
+         </div>
+         <div className='cardName text-center'>{card.name} </div>         
+
+       </div>
+     </div>
         ))}
       </Slider>
     </div>
