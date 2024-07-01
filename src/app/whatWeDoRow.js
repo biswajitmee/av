@@ -8,15 +8,15 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
   const heightsDivRef = useRef(null);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 1024px)'); // Assuming large devices are 1024px and above
+    const mediaQuery = window.matchMedia('(min-width: 1024px)'); // 1024px and above
 
     const expandBoxImg = () => {
       gsap.killTweensOf(compresDivRef.current);
       gsap.killTweensOf(heightsDivRef.current);
 
       gsap.fromTo(heightsDivRef.current,
-        { height: '260px' },
-        { height: '350px', duration: 1, ease: "power4.out" }
+        { height: '260px',  backgroundColor:'#fff' },
+        { height: '350px', duration: 1, ease: "power4.out", backgroundColor:'#F6FAFF' }
       );
       gsap.fromTo(compresDivRef.current,
         { height: '0%', bottom: '0', position: 'absolute' },
@@ -29,8 +29,8 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
       gsap.killTweensOf(heightsDivRef.current);
 
       gsap.fromTo(heightsDivRef.current,
-        { height: '350px', duration: 1, ease: "power4.out" },
-        { height: '260px' }
+        { height: '350px', duration: 1, ease: "power4.out", backgroundColor:'#F6FAFF' },
+        { height: '260px', backgroundColor:'#fff'  }
       );
       gsap.to(compresDivRef.current,
         { height: '0%', duration: 1, ease: "power4.out" }
@@ -74,14 +74,17 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
   }, [rowClass]);
 
   return (
+
+<> 
+
     <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 whtdo bordr py-12 ${rowClass}`} ref={heightsDivRef}>
       <div className="p-4 flex flex-col justify-end">
-        <p className="text-5xl text-black">{title}</p>
+        <p className="text-4xl text-black font-light	">{title}</p>
       </div>
       <div className="p-4 flex flex-col justify-end ">
         <div className='md:revelCover relative'>
           <div ref={compresDivRef} className='md:revelDiv relative'>
-            <div className='md:revelImg relative'>
+            <div className='revelImgxs md:revelImg relative'>
               <video
                 className='md:object-cover md:h-full md:w-auto'
                 src={videoSrc}
@@ -95,9 +98,10 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
         </div>
       </div>
       <div className="p-4 flex flex-col justify-end">
-        <p className="text-lg text-black">{description}</p>
+        <p className="text-lg text-black ">{description}</p>
       </div>
     </div>
+    </>
   );
 }
 

@@ -216,10 +216,7 @@ export default function Home() {
           </div>
           <div className="ScrollSection bg-white pt-5 pb-5">
             <LogoScroller />
-            <p className="flex justify-center items-center text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl h-60 sm:h-96 md:h-96">
-              Odds are you’ve worn a<br /> product we’ve made
-            </p>
-            <p className='pl-10 pb-5 text-5xl text-black	'>What we do</p>
+          
             <WhatWeDo />
           </div>
           <KeyFeature />

@@ -60,7 +60,10 @@ const CardCarousel = () => {
   ];
 
   return (
-    <div className="container mx-auto px-10">
+    <div className="container mx-auto px-12 pb-40 clientsays">
+
+<p className=' text-5xl py-36 lg:w-96 mx-auto'>What Our Clients <br/> Say About Us</p>
+
       <Slider {...settings}>
         {cards.map((card) => (
        <div key={card.id} className="p-4 pt-20" style={{ width: '100%' }}> 

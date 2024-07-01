@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&family=Inter:wght@100..900&display=swap');
 
 
@@ -323,9 +323,22 @@
   .revelImg video {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 0;    
   }
 
+  /* .revelImgxs {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .revelImgxs video {
+    position: absolute;
+    bottom: 0;
+    right: 0;   
+    width: 100%; 
+  } */
 
   /* .test {
     position: absolute;
@@ -473,6 +486,15 @@
   }
 
 
+
+  .KeayFeatureSection p {
+    font-family: "Anek Gurmukhi", sans-serif;
+    color: #060606;
+    font-weight: 400;
+  }
+
+
+
   .cutout {
     position: absolute;
     width: 550px;
@@ -485,23 +507,25 @@
     padding-bottom: 50px;
   }
 
- 
 
-  
+
+
 
   .CardDeesign {
     border-radius: 20px;
     width: 500px;
   }
+
   .CardDeesignMob {
     border-radius: 20px;
     width: 100%;
-  
+
   }
 
   .cardPhoto {
     position: relative;
   }
+
   .photoCover {
     position: absolute;
     width: 180px;
@@ -509,18 +533,31 @@
     border-radius: 100px;
     background-color: #8571FD;
     left: calc(50% - 90px);
-    margin-top: -140px;    
+    margin-top: -140px;
     border: 10px solid #fff;
     overflow: hidden;
   }
 
 
-.cardContent{ color: #000;  }
+  .cardContent {
+    color: #000;
+    text-align: justify;
+  }
 
+  .cardName {
+    font-weight: 600;
+  }
 
+  .clientsays {
+    background-color: #F7FBFF;
+  }
 
+  .clientsays p {
+    font-family: "Anek Gurmukhi", sans-serif;
+    color: #00305F;
+    font-weight: 500;
 
-
+  }
 
 
 
