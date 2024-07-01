@@ -75,7 +75,7 @@ export default function Home() {
       <CustomCursor />
       <div id="smooth-wrapper" ref={main}>
         <div id="smooth-content">
-          <nav className="absolute container z-50 mt-3">
+          <nav className="absolute container z-50 mt-3 bg-black">
             <div className="relative container mx-auto flex items-center justify-between">
               <div className="absolute left-0 h-12 flex items-center justify-center">
                 <MenuAnimation />

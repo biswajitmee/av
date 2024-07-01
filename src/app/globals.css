@@ -821,6 +821,11 @@ video {
   background-color: rgb(252 211 77 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-blue-600{
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -937,6 +942,30 @@ video {
   padding-bottom: 9rem;
 }
 
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
 .pb-40{
   padding-bottom: 10rem;
 }
@@ -951,6 +980,10 @@ video {
 
 .pl-3{
   padding-left: 0.75rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
 }
 
 .pl-6{
@@ -1022,14 +1055,6 @@ video {
 
 .font-light{
   font-weight: 300;
-}
-
-.font-thin{
-  font-weight: 100;
-}
-
-.font-extralight{
-  font-weight: 200;
 }
 
 .text-black{
@@ -1302,26 +1327,12 @@ nav {
   font-family: "Archivo", sans-serif;
 }
 
-/* .revelImgxs {
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  .revelImgxs video {
-    position: absolute;
-    bottom: 0;
-    right: 0;   
-    width: 100%; 
-  } */
-
-/* .test {
-    position: absolute;
-    width: 30%;
-    height: 80%;
-    overflow: hidden;
-  } */
+.videoFix{
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 
 .small {
   position: absolute;
@@ -1490,7 +1501,13 @@ nav {
   font-weight: 500;
 }
 
-:root {
+.lineKey{
+  height: 2px;
+  background-color: rgb(90, 90, 90);
+  margin: 10px 15px;
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -1502,6 +1519,16 @@ nav {
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
 @media (min-width: 640px){
@@ -1513,12 +1540,21 @@ nav {
     height: 24rem;
   }
 
+  .sm\:h-80{
+    height: 20rem;
+  }
+
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-col{
     flex-direction: column;
+  }
+
+  .sm\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .sm\:text-3xl{
@@ -1532,12 +1568,8 @@ nav {
     height: 24rem;
   }
 
-  .md\:h-full{
-    height: 100%;
-  }
-
-  .md\:w-auto{
-    width: auto;
+  .md\:h-80{
+    height: 20rem;
   }
 
   .md\:grid-cols-2{
@@ -1556,9 +1588,9 @@ nav {
     border-style: none;
   }
 
-  .md\:object-cover{
-    -o-object-fit: cover;
-       object-fit: cover;
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:text-4xl{
@@ -1588,16 +1620,17 @@ nav {
     right: 0;
   }
 
-  .md\:revelImg img {
+  .md\:revelImg video {
     position: absolute;
     bottom: 0;
     right: 0;
   }
 
-  .md\:revelImg video {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  .md\:videoFixL{
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: auto;
+    width: auto;
   }
 
   .md\:cutout {
@@ -1611,9 +1644,17 @@ nav {
     color: #000;
     padding-bottom: 50px;
   }
+
+  .md\:lineKeyLG{
+    display: none;
+  }
 }
 
 @media (min-width: 1024px){
+  .lg\:h-80{
+    height: 20rem;
+  }
+
   .lg\:w-1\/2{
     width: 50%;
   }
@@ -1634,6 +1675,20 @@ nav {
     border-style: none;
   }
 
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .lg\:py-36{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+
+  .lg\:pl-10{
+    padding-left: 2.5rem;
+  }
+
   .lg\:pr-10{
     padding-right: 2.5rem;
   }
@@ -1646,9 +1701,41 @@ nav {
     padding-top: 6rem;
   }
 
+  .lg\:pl-6{
+    padding-left: 1.5rem;
+  }
+
   .lg\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:revelDiv {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .lg\:revelImg {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .lg\:revelImg video {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .lg\:videoFixL{
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: auto;
+    width: auto;
   }
 
   .lg\:cutout {
@@ -1661,6 +1748,10 @@ nav {
     border-left: 1px solid #8571FD;
     color: #000;
     padding-bottom: 50px;
+  }
+
+  .lg\:lineKeyLG{
+    display: none;
   }
 }
 

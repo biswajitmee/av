@@ -27,13 +27,13 @@ const KeyFeature = () => {
 
   return (
 <>
-<div className='KeayFeatureSection'> 
+<div className='KeayFeatureSection '> 
 
-    <p className=' text-5xl pl-6 py-36 lg:w-1/2'>After helping hundreds of brands, there are a few key things we've learned are needed to do the best work</p>
+    <p className='text-3xl pl-6 py-10 lg:text-5xl lg:pl-6 lg:py-36 lg:w-1/2'>After helping hundreds of brands, there are a few key things we've learned are needed to do the best work</p>
 
     <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row">
       {keyFeatures.map((feature, index) => (
-        <div ref={el => divs.current[index] = el} key={feature.id} className="grow h-80">
+        <div ref={el => divs.current[index] = el} key={feature.id} className="grow lg:h-80 md:h-80 sm:h-80">
           <div className="md:cutout lg:cutout lg:border-none md:border-none">
             <div className="flex flex-col items-stretch sm:grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 h-60">
               <div className="grow flex items-stretch">
@@ -44,11 +44,12 @@ const KeyFeature = () => {
                     </div>
                 <div className="self-end text-left  text-xl">{feature.title}</div>
               </div>
-              <div className="self-end">{feature.content}</div>
+              <div className="self-end px-7 lg:px-0 md:px-0 sm:px-0">{feature.content}</div>
             </div>
           </div>
+          <div className='lineKey lg:lineKeyLG md:lineKeyLG'></div>
         </div>
-        
+       
       ))}
     </div>
     </div>

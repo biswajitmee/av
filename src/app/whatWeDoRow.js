@@ -16,11 +16,11 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
 
       gsap.fromTo(heightsDivRef.current,
         { height: '260px',  backgroundColor:'#fff' },
-        { height: '350px', duration: 1, ease: "power4.out", backgroundColor:'#F6FAFF' }
+        { height: '350px', duration: 0.7, ease: "power4.out", backgroundColor:'#F6FAFF' }
       );
       gsap.fromTo(compresDivRef.current,
         { height: '0%', bottom: '0', position: 'absolute' },
-        { height: '225px', bottom: '0', duration: 1, ease: "power4.out" }
+        { height: '225px', bottom: '0', duration: 0.7, ease: "power4.out" }
       );
     };
 
@@ -29,11 +29,11 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
       gsap.killTweensOf(heightsDivRef.current);
 
       gsap.fromTo(heightsDivRef.current,
-        { height: '350px', duration: 1, ease: "power4.out", backgroundColor:'#F6FAFF' },
+        { height: '350px', duration: 0.7, ease: "power4.out", backgroundColor:'#F6FAFF' },
         { height: '260px', backgroundColor:'#fff'  }
       );
       gsap.to(compresDivRef.current,
-        { height: '0%', duration: 1, ease: "power4.out" }
+        { height: '0%', duration: 0.7, ease: "power4.out" }
       );
     };
 
@@ -78,15 +78,15 @@ function WhatWeRow({ rowClass, videoSrc, title, description }) {
 <> 
 
     <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 whtdo bordr py-12 ${rowClass}`} ref={heightsDivRef}>
-      <div className="p-4 flex flex-col justify-end">
-        <p className="text-4xl text-black font-light	">{title}</p>
+      <div className=" flex flex-col justify-end">
+        <p className="text-4xl text-black font-light pl-4 lg:pl-10	">{title}</p>
       </div>
       <div className="p-4 flex flex-col justify-end ">
-        <div className='md:revelCover relative'>
-          <div ref={compresDivRef} className='md:revelDiv relative'>
-            <div className='revelImgxs md:revelImg relative'>
+        <div className='md:revelCover'>
+          <div ref={compresDivRef} className='  md:revelDiv lg:revelDiv '>
+            <div className='md:revelImg lg:revelImg'>
               <video
-                className='md:object-cover md:h-full md:w-auto'
+                className='videoFix lg:videoFixL md:videoFixL'
                 src={videoSrc}
                 autoPlay
                 loop
