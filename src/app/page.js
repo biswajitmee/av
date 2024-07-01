@@ -15,8 +15,9 @@ import LogoScroller from './brandHorizentalAnimation';
 import WhatWeDo from './whatWeDo';
 import MenuAnimation from './menu';
 import KeyFeature from './keyFeature';
-import ClientSays from './clientSays';
- 
+
+import CardCarousel from './CardCarousel';
+
 const images = {
   Designer: 'designer_box.jpg',
   Casual: 'casual_box.jpg',
@@ -65,11 +66,6 @@ export default function Home() {
 
     }, main);
     return () => ctx.revert();
-
-
-
-
-
 
 
   }, []);
@@ -130,11 +126,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="leftPanel2 absolute inset-0 flex items-center w-64 z-40">
             <div className="pl-3">
-
-
               <div className='menuContent'>
                 <li ref={el => menuItems.current[0] = el} className="menuItem">
                   What We Do
@@ -174,7 +167,6 @@ export default function Home() {
               <div className="righttBar"></div>
               <div className="topBar"></div>
               <div className="bottomBar"></div>
-
               <div className="cornerShowcase z-50">
                 <div className="absolute top-0 left-0 z-50">
                   <img src="corner-left-top-2.svg" alt="top-left corner" className="w-8 h-8" />
@@ -209,25 +201,19 @@ export default function Home() {
                   muted
                   playsInline
                 />
-
                 <div className='intro'>Since 2006, we’ve been manufacturing clothing in Los Angeles for the
                   most innovative designer brands, creating, building, and delivering apparel worth talking about.</div>
-
                 <div className='introHeading'>
                   <div>We produce </div>
                   <div className='text-right'>luxury cloth</div>
                 </div>
-
               </div>
-
-
             </div>
             <Designer />
             <Casual />
             <Athleisure />
             <Lounge />
           </div>
-
           <div className="ScrollSection bg-white pt-5 pb-5">
             <LogoScroller />
             <p className="flex justify-center items-center text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl h-60 sm:h-96 md:h-96">
@@ -236,22 +222,8 @@ export default function Home() {
             <p className='pl-10 pb-5 text-5xl text-black	'>What we do</p>
             <WhatWeDo />
           </div>
-
- 
- 
-          <div class="flex flex-row h-96 bg-orange-400">
-            <div>01</div>
-            <div>02</div>
-            <div>03</div>
-            <div>04</div>
-            <div>05</div>
-            <div>06</div>
-          </div>
-
-
           <KeyFeature />
-
-
+          <CardCarousel />
           <div class="flex flex-row h-96 bg-orange-400">
             <div>01</div>
             <div>02</div>
@@ -260,9 +232,6 @@ export default function Home() {
             <div>05</div>
             <div>06</div>
           </div>
-
-<ClientSays/>
-
         </div>
       </div>
     </>

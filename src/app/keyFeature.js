@@ -32,8 +32,8 @@ function keyFeature() {
                         <div class="flex flex-col items-stretch  sm:grid grid-cols-2   md:grid-cols-2  lg:grid-cols-2  h-60 ">
 
                             <div className='grow flex items-stretch'>
-                                <div className='self-start'>01</div>
-                                <div className='self-end'>Early Stage</div>
+                                <div className='self-start pl-6'>01</div>
+                                <div className='self-end text-left'>Early Stage</div>
                             </div>
 
                             <div className='self-end'>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
@@ -52,8 +52,8 @@ function keyFeature() {
                         <div class="flex flex-col items-stretch  sm:grid grid-cols-2   md:grid-cols-2  lg:grid-cols-2  h-60 ">
 
                             <div className='grow flex items-stretch'>
-                                <div className='self-start'>02</div>
-                                <div className='self-end'>Early Stage</div>
+                                <div className='self-start pl-6'>02</div>
+                                <div className='self-end text-left'>Trust</div>
                             </div>
 
                             <div className='self-end'>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
@@ -69,8 +69,8 @@ function keyFeature() {
                         <div class="flex flex-col items-stretch  sm:grid grid-cols-2   md:grid-cols-2  lg:grid-cols-2  h-60 ">
 
                             <div className='grow flex items-stretch'>
-                                <div className='self-start'>03</div>
-                                <div className='self-end'>Early Stage</div>
+                                <div className='self-start pl-6'>03</div>
+                                <div className='self-end text-left'>Loyalty</div>
                             </div>
 
                             <div className='self-end'>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
@@ -86,8 +86,8 @@ function keyFeature() {
                         <div class="flex flex-col items-stretch  sm:grid grid-cols-2   md:grid-cols-2  lg:grid-cols-2  h-60 ">
 
                             <div className='grow flex items-stretch'>
-                                <div className='self-start'>04</div>
-                                <div className='self-end'>Early Stage</div>
+                                <div className='self-start pl-6'>04</div>
+                                <div className='self-end text-left'>Quality</div>
                             </div>
 
                             <div className='self-end'>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
@@ -103,8 +103,8 @@ function keyFeature() {
                         <div class="flex flex-col items-stretch  sm:grid grid-cols-2   md:grid-cols-2  lg:grid-cols-2  h-60 ">
 
                             <div className='grow flex items-stretch'>
-                                <div className='self-start'>05</div>
-                                <div className='self-end'>Early Stage</div>
+                                <div className='self-start pl-6'>05</div>
+                                <div className='self-end text-left'>Expenditure</div>
                             </div>
 
                             <div className='self-end'>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
@@ -120,11 +120,11 @@ function keyFeature() {
                         <div class="flex flex-col items-stretch  sm:grid grid-cols-2   md:grid-cols-2  lg:grid-cols-2  h-60 ">
 
                             <div className='grow flex items-stretch'>
-                                <div className='self-start'>06</div>
-                                <div className='self-end'>Early Stage</div>
+                                <div className='self-start pl-6'>06</div>
+                                <div className='self-end text-left'>Success</div>
                             </div>
 
-                            <div className='self-end'>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
+                            <div className='self-end '>We have formed a process that gives our customers clarity and takes care of all your needs in any way possible. We'll walk you through it in our introduction meeting.</div>
 
                         </div>
 
