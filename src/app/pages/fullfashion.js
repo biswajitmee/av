@@ -2,15 +2,20 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function Designer() {
-    const oneShowcaseRef = useRef(null);
+function Fullfashion() {
+    const nineShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showOneShowcase = () => {
-            gsap.fromTo(oneShowcaseRef.current,
+        const showNineShowcase = () => {
+
+            gsap.killTweensOf(nineShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+            gsap.fromTo(nineShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.5, opacity:1 }
             );
@@ -28,8 +33,14 @@ function Designer() {
 
         };
 
-        const hideOneShowcase = () => {
-            gsap.to(oneShowcaseRef.current,
+        const hideNineShowcase = () => {
+
+            gsap.killTweensOf(nineShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.to(nineShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
@@ -38,22 +49,22 @@ function Designer() {
             );
         };
 
-        const spanElement = document.querySelector('.one span');
+        const spanElement = document.querySelector('.nine');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showOneShowcase);
-            spanElement.addEventListener('mouseleave', hideOneShowcase);
+            spanElement.addEventListener('mouseenter', showNineShowcase);
+            spanElement.addEventListener('mouseleave', hideNineShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showOneShowcase);
-                spanElement.removeEventListener('mouseleave', hideOneShowcase);
+                spanElement.removeEventListener('mouseenter', showNineShowcase);
+                spanElement.removeEventListener('mouseleave', hideNineShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/designer_bg.jpg')] hidden">
+        <div ref={nineShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/fullfashion_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -61,7 +72,7 @@ function Designer() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/designer_box.jpg')]">
+                            <div className="compresImg bg-[url('/fullfashion_box.jpg')]">
                             </div>
                         </div>
                     </div>
@@ -72,4 +83,4 @@ function Designer() {
     );
 }
 
-export default Designer;
+export default Fullfashion;

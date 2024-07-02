@@ -15,7 +15,11 @@ function Lounge() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
-            
+            gsap.fromTo('.coverVideo',
+                { display: 'block',  duration: 0, },
+                { display: 'none', duration: 0, }
+            );
+
             gsap.fromTo(fourShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.1, opacity:1 }
@@ -41,6 +45,10 @@ function Lounge() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'none',  duration: 0, },
+                { display: 'block', duration: 0, }
+            );
 
             gsap.to(fourShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
@@ -66,7 +74,7 @@ function Lounge() {
     }, []);
 
     return (
-        <div ref={fourShowcaseRef} className="showcase fourShowcase bg-red-500 bg-[url('/lounge_bg.jpg')] hidden">
+        <div ref={fourShowcaseRef} className="showcase fourShowcase bg-[url('/lounge_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                 Lounge

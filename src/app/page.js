@@ -17,6 +17,13 @@ import MenuAnimation from './menu';
 import KeyFeature from './keyFeature';
 
 import CardCarousel from './CardCarousel';
+import Highstreet from './pages/highstreet';
+import Athletic from './pages/athletic';
+import Swim from './pages/swim';
+import Denim from './pages/denim';
+import Fullfashion from './pages/fullfashion';
+import Outdoors from './pages/outdoors';
+import Others from './pages/others';
 
 const images = {
   Designer: 'designer_box.jpg',
@@ -213,10 +220,16 @@ export default function Home() {
             <Casual />
             <Athleisure />
             <Lounge />
+            <Highstreet />
+            <Athletic />
+            <Swim />
+            <Denim />
+            <Fullfashion />
+            <Outdoors />
+            <Others />
           </div>
           <div className="ScrollSection bg-white pt-5 pb-5">
             <LogoScroller />
-          
             <WhatWeDo />
           </div>
           <KeyFeature />

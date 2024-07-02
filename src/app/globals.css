@@ -704,10 +704,6 @@ video {
   height: 2rem;
 }
 
-.h-80{
-  height: 20rem;
-}
-
 .h-96{
   height: 24rem;
 }
@@ -889,6 +885,14 @@ video {
   background-image: url('/casual_box.jpg');
 }
 
+.bg-\[url\(\'\/denim_bg\.jpg\'\)\]{
+  background-image: url('/denim_bg.jpg');
+}
+
+.bg-\[url\(\'\/denim_box\.jpg\'\)\]{
+  background-image: url('/denim_box.jpg');
+}
+
 .bg-\[url\(\'\/designer_bg\.jpg\'\)\]{
   background-image: url('/designer_bg.jpg');
 }
@@ -897,12 +901,48 @@ video {
   background-image: url('/designer_box.jpg');
 }
 
+.bg-\[url\(\'\/fullfashion_bg\.jpg\'\)\]{
+  background-image: url('/fullfashion_bg.jpg');
+}
+
+.bg-\[url\(\'\/fullfashion_box\.jpg\'\)\]{
+  background-image: url('/fullfashion_box.jpg');
+}
+
+.bg-\[url\(\'\/highstreet_bg\.jpg\'\)\]{
+  background-image: url('/highstreet_bg.jpg');
+}
+
+.bg-\[url\(\'\/highstreet_box\.jpg\'\)\]{
+  background-image: url('/highstreet_box.jpg');
+}
+
 .bg-\[url\(\'\/lounge_bg\.jpg\'\)\]{
   background-image: url('/lounge_bg.jpg');
 }
 
 .bg-\[url\(\'\/lounge_box\.jpg\'\)\]{
   background-image: url('/lounge_box.jpg');
+}
+
+.bg-\[url\(\'\/others\.jpg\'\)\]{
+  background-image: url('/others.jpg');
+}
+
+.bg-\[url\(\'\/outdoors_bg\.jpg\'\)\]{
+  background-image: url('/outdoors_bg.jpg');
+}
+
+.bg-\[url\(\'\/outdoors_box\.jpg\'\)\]{
+  background-image: url('/outdoors_box.jpg');
+}
+
+.bg-\[url\(\'\/swim_bg\.jpg\'\)\]{
+  background-image: url('/swim_bg.jpg');
+}
+
+.bg-\[url\(\'\/swim_box\.jpg\'\)\]{
+  background-image: url('/swim_box.jpg');
 }
 
 .object-cover{
@@ -932,26 +972,6 @@ video {
   padding-right: 1.5rem;
 }
 
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py-36{
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
-
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .px-7{
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -960,6 +980,16 @@ video {
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-36{
+  padding-top: 9rem;
+  padding-bottom: 9rem;
 }
 
 .pb-10{
@@ -1239,12 +1269,13 @@ body a:hover .custom-cursor .inner-dot,
   font-size: 14px;
   border-radius: 50px;
   padding: 6px 18px 7px;
-  background-color: rgba(55, 50, 70, 0.703);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: rgba(55, 50, 70, 0.500);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   border: 1px solid rgba(168, 168, 168, 0.034);
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  color: #fff;
 }
 
 .leftPanel a:hover {
@@ -1536,12 +1567,12 @@ body {
     display: grid;
   }
 
-  .sm\:h-96{
-    height: 24rem;
-  }
-
   .sm\:h-80{
     height: 20rem;
+  }
+
+  .sm\:h-96{
+    height: 24rem;
   }
 
   .sm\:grid-cols-2{
@@ -1564,12 +1595,12 @@ body {
 }
 
 @media (min-width: 768px){
-  .md\:h-96{
-    height: 24rem;
-  }
-
   .md\:h-80{
     height: 20rem;
+  }
+
+  .md\:h-96{
+    height: 24rem;
   }
 
   .md\:grid-cols-2{
@@ -1689,6 +1720,10 @@ body {
     padding-left: 2.5rem;
   }
 
+  .lg\:pl-6{
+    padding-left: 1.5rem;
+  }
+
   .lg\:pr-10{
     padding-right: 2.5rem;
   }
@@ -1699,10 +1734,6 @@ body {
 
   .lg\:pt-24{
     padding-top: 6rem;
-  }
-
-  .lg\:pl-6{
-    padding-left: 1.5rem;
   }
 
   .lg\:text-5xl{

@@ -2,15 +2,21 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function Designer() {
-    const oneShowcaseRef = useRef(null);
+function Swim() {
+    const sevenShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showOneShowcase = () => {
-            gsap.fromTo(oneShowcaseRef.current,
+        const showSevenShowcase = () => {
+
+            gsap.killTweensOf(sevenShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.fromTo(sevenShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.5, opacity:1 }
             );
@@ -28,8 +34,14 @@ function Designer() {
 
         };
 
-        const hideOneShowcase = () => {
-            gsap.to(oneShowcaseRef.current,
+        const hideSevenShowcase = () => {
+
+            gsap.killTweensOf(sevenShowcaseRef.current);
+            gsap.killTweensOf(compresDivRef.current);
+            gsap.killTweensOf(compresTextRef.current);
+
+
+            gsap.to(sevenShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
@@ -38,22 +50,22 @@ function Designer() {
             );
         };
 
-        const spanElement = document.querySelector('.one span');
+        const spanElement = document.querySelector('.seven');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showOneShowcase);
-            spanElement.addEventListener('mouseleave', hideOneShowcase);
+            spanElement.addEventListener('mouseenter', showSevenShowcase);
+            spanElement.addEventListener('mouseleave', hideSevenShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showOneShowcase);
-                spanElement.removeEventListener('mouseleave', hideOneShowcase);
+                spanElement.removeEventListener('mouseenter', showSevenShowcase);
+                spanElement.removeEventListener('mouseleave', hideSevenShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/designer_bg.jpg')] hidden">
+        <div ref={sevenShowcaseRef} className="showcase sevenShowcase bg-red-500 bg-[url('/swim_bg.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -61,7 +73,7 @@ function Designer() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/designer_box.jpg')]">
+                            <div className="compresImg bg-[url('/swim_box.jpg')]">
                             </div>
                         </div>
                     </div>
@@ -72,4 +84,4 @@ function Designer() {
     );
 }
 
-export default Designer;
+export default Swim;

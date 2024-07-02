@@ -200,11 +200,12 @@ body {
     font-size: 14px;
     border-radius: 50px;
     padding: 6px 18px 7px;
-    background-color: rgba(55, 50, 70, 0.703);
-    backdrop-filter: blur(10px);
+    background-color: rgba(55, 50, 70, 0.500);
+    backdrop-filter: blur(30px);
     border: 1px solid rgba(168, 168, 168, 0.034);
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    color: #fff;
   }
 
   .leftPanel a:hover {

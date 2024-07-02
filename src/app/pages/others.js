@@ -2,23 +2,22 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function Athletic() {
-    const sixShowcaseRef = useRef(null);
+function Others() {
+    const elevenShowcaseRef = useRef(null);
     const compresDivRef = useRef(null);
     const compresTextRef = useRef(null);
 
 
     useEffect(() => {
-        const showSixShowcase = () => {
+        const showElevenShowcase = () => {
 
-            gsap.killTweensOf(sixShowcaseRef.current);
+            gsap.killTweensOf(elevenShowcaseRef.current);
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
-
-            gsap.fromTo(sixShowcaseRef.current,
+            gsap.fromTo(elevenShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
-                { display: 'block', duration: 0.9, opacity:1 }
+                { display: 'block', duration: 0.5, opacity:1 }
             );
 
             gsap.fromTo(compresDivRef.current,
@@ -34,44 +33,38 @@ function Athletic() {
 
         };
 
-        const hideSixShowcase = () => {
+        const hideElevenShowcase = () => {
 
-            gsap.killTweensOf(sixShowcaseRef.current);
+            gsap.killTweensOf(elevenShowcaseRef.current);
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
 
-            gsap.to(sixShowcaseRef.current,
+            gsap.to(elevenShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );
 
             gsap.to(compresDivRef.current,
                 { width: '0%', duration: 1, ease: "power4.out" }
             );
-
-            gsap.fromTo(sixShowcaseRef.current,
-               
-                { display: 'block', duration: 0.9, opacity:1 },
-                { display: 'none', opacity:0, duration: 0.5, }
-            );
         };
 
-        const spanElement = document.querySelector('.six');
+        const spanElement = document.querySelector('.eleven');
         if (spanElement) {
-            spanElement.addEventListener('mouseenter', showSixShowcase);
-            spanElement.addEventListener('mouseleave', hideSixShowcase);
+            spanElement.addEventListener('mouseenter', showElevenShowcase);
+            spanElement.addEventListener('mouseleave', hideElevenShowcase);
         }
 
         return () => {
             if (spanElement) {
-                spanElement.removeEventListener('mouseenter', showSixShowcase);
-                spanElement.removeEventListener('mouseleave', hideSixShowcase);
+                spanElement.removeEventListener('mouseenter', showElevenShowcase);
+                spanElement.removeEventListener('mouseleave', hideElevenShowcase);
             }
         };
     }, []);
 
     return (
-        <div ref={sixShowcaseRef} className="showcase sixShowcase bg-red-500 bg-[url('/athletics_bg.jpg')] hidden">
+        <div ref={elevenShowcaseRef} className="showcase elevenShowcase bg-red-500 bg-[url('/others.jpg')] hidden">
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -79,7 +72,7 @@ function Athletic() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/athletics_box.jpg')]">
+                            <div className="compresImg">
                             </div>
                         </div>
                     </div>
@@ -90,4 +83,4 @@ function Athletic() {
     );
 }
 
-export default Athletic;
+export default Others;

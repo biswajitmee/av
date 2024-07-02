@@ -17,6 +17,10 @@ function Casual() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'block',  duration: 0, },
+                { display: 'none', duration: 0, }
+            );
             
             gsap.fromTo(twoShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
@@ -43,6 +47,10 @@ function Casual() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'none',  duration: 0, },
+                { display: 'block', duration: 0, }
+            );
 
             gsap.to(twoShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
