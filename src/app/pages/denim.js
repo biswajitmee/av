@@ -15,6 +15,10 @@ function Denim() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'block',  duration: 0, },
+                { display: 'none', duration: 0, }
+            );
 
             gsap.fromTo(eightShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
@@ -39,6 +43,11 @@ function Denim() {
             gsap.killTweensOf(eightShowcaseRef.current);
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
+
+            gsap.fromTo('.coverVideo',
+                { display: 'none',  duration: 0, },
+                { display: 'block', duration: 0, }
+            );
 
 
             gsap.to(eightShowcaseRef.current,

@@ -24,6 +24,10 @@ import Denim from './pages/denim';
 import Fullfashion from './pages/fullfashion';
 import Outdoors from './pages/outdoors';
 import Others from './pages/others';
+import Slider from './pages/slider';
+import Compare from './pages/compare';
+import Faq from './pages/faq';
+import Howcanhelp from './pages/howcanhelp';
 
 const images = {
   Designer: 'designer_box.jpg',
@@ -232,16 +236,22 @@ export default function Home() {
             <LogoScroller />
             <WhatWeDo />
           </div>
+          <Slider />
           <KeyFeature />
+         
           <CardCarousel />
-          <div class="flex flex-row h-96 bg-orange-400">
-            <div>01</div>
-            <div>02</div>
-            <div>03</div>
-            <div>04</div>
-            <div>05</div>
-            <div>06</div>
-          </div>
+
+         
+
+          <Compare />
+
+          <Faq />
+
+          <Howcanhelp />
+
+
+
+       
         </div>
       </div>
     </>

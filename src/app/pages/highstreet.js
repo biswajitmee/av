@@ -15,6 +15,10 @@ function Highstreet() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'block',  duration: 0, },
+                { display: 'none', duration: 0, }
+            );
 
 
             gsap.fromTo(fiveShowcaseRef.current,
@@ -41,6 +45,10 @@ function Highstreet() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'none',  duration: 0, },
+                { display: 'block', duration: 0, }
+            );
 
 
             gsap.to(fiveShowcaseRef.current,

@@ -15,6 +15,10 @@ function Athletic() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'block',  duration: 0, },
+                { display: 'none', duration: 0, }
+            );
 
             gsap.fromTo(sixShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
@@ -41,6 +45,12 @@ function Athletic() {
             gsap.killTweensOf(compresTextRef.current);
 
 
+            gsap.fromTo('.coverVideo',
+                { display: 'none',  duration: 0, },
+                { display: 'block', duration: 0, }
+            );
+
+            
             gsap.to(sixShowcaseRef.current,
                 { display: 'none', duration: 0.1 }
             );

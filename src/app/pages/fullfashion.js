@@ -15,6 +15,11 @@ function Fullfashion() {
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
 
+            gsap.fromTo('.coverVideo',
+                { display: 'block',  duration: 0, },
+                { display: 'none', duration: 0, }
+            );
+
             gsap.fromTo(nineShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.5, opacity:1 }
@@ -38,6 +43,11 @@ function Fullfashion() {
             gsap.killTweensOf(nineShowcaseRef.current);
             gsap.killTweensOf(compresDivRef.current);
             gsap.killTweensOf(compresTextRef.current);
+
+            gsap.fromTo('.coverVideo',
+                { display: 'none',  duration: 0, },
+                { display: 'block', duration: 0, }
+            );
 
 
             gsap.to(nineShowcaseRef.current,
