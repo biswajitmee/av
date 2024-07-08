@@ -29,7 +29,7 @@ import Compare from './components/compare';
 import Faq from './components/faq';
 import Howcanhelp from './components/howcanhelp';
 
-const images = {
+const boxImges = {
   Designer: 'designer_box.jpg',
   Casual: 'casual_box.jpg',
   Athleisure: 'athleisure_box.jpg',
@@ -159,7 +159,7 @@ export default function Home() {
               </div>
 
 
-              {Object.keys(images).map((item, index) => (
+              {Object.keys(boxImges).map((item, index) => (
                 <div
                   key={index}
                   onMouseEnter={() => setHoveredItem(item)}
@@ -192,10 +192,10 @@ export default function Home() {
                   <img src="corner-right-bottom-2.svg" alt="bottom-right corner" className="w-8 h-8" />
                 </div>
 
-                {Object.keys(images).map((item, index) => (
+                {Object.keys(boxImges).map((item, index) => (
                   <img
                     key={index}
-                    src={images[item]}
+                    src={boxImges[item]}
                     alt={item}
                     className={`cornerBox absolute w-64 h-auto transition-opacity duration-300 ${hoveredItem === item ? 'opacity-100' : 'opacity-0'}`}
                     style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}

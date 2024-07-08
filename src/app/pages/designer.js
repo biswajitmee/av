@@ -20,6 +20,11 @@ function Designer() {
                 { display: 'none', duration: 0, }
             );
 
+            // gsap.fromTo('.oneShowcase',
+            //     {  opacity:0.5, duration: 0.5, },
+            //     { duration: 0.1, opacity:1 }
+            // );
+
             gsap.fromTo(oneShowcaseRef.current,
                 { display: 'none', opacity:0, duration: 0.5, },
                 { display: 'block', duration: 0.1, opacity:1 }
@@ -82,7 +87,8 @@ function Designer() {
     }, []);
 
     return (
-        <div ref={oneShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/designer_bg.jpg')] hidden">
+        <div ref={oneShowcaseRef} className="showcase  bg-[url('/designer_bg.jpg')] hidden">
+            <div className='oneShowcase'> 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -96,6 +102,7 @@ function Designer() {
                     </div>
                     <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
                 </div>
+            </div>
             </div>
         </div>
     );

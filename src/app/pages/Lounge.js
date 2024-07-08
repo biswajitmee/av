@@ -74,7 +74,8 @@ function Lounge() {
     }, []);
 
     return (
-        <div ref={fourShowcaseRef} className="showcase fourShowcase bg-[url('/lounge_bg.jpg')] hidden">
+        <div ref={fourShowcaseRef} className="showcase  bg-[url('/lounge_bg.jpg')] hidden">
+            <div className='fourShowcase'> 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                 Lounge
@@ -88,6 +89,7 @@ function Lounge() {
                     </div>
                     <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
                 </div>
+            </div>
             </div>
         </div>
     );

@@ -73,7 +73,8 @@ function Outdoors() {
     }, []);
 
     return (
-        <div ref={tenShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/outdoors_bg.jpg')] hidden">
+        <div ref={tenShowcaseRef} className="showcase  bg-red-500 bg-[url('/outdoors_bg.jpg')] hidden">
+            <div className='tenShowcase'> 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -87,6 +88,7 @@ function Outdoors() {
                     </div>
                     <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
                 </div>
+            </div>
             </div>
         </div>
     );

@@ -232,6 +232,27 @@ body {
 
   }
 
+
+  .oneShowcase,
+  .twoShowcase,
+  .threeShowcase,
+  .fourShowcase,
+  .fiveShowcase,
+  .sixShowcase,
+  .sevenShowcase,
+  .eightShowcase,
+  .nineShowcase,
+  .tenShowcase,
+  .elevenShowcase {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.607);
+  }
+
+
+
   .cornerShowcase {
     position: absolute;
     width: calc(32vw - 17px);
@@ -257,7 +278,7 @@ body {
     width: 400px;
     height: 500px;
     position: relative;
-
+    border-radius: 7px;
   }
 
   .compresDiv {
@@ -265,6 +286,7 @@ body {
     position: absolute;
     width: 400px;
     height: 500px;
+    border-radius: 7px;
   }
 
   .compresImg {
@@ -273,6 +295,7 @@ body {
     background-position: center center;
     position: absolute;
     right: 0;
+    border-radius: 7px;
   }
 
 
@@ -730,7 +753,7 @@ body {
   }
 
 
-/* new css for fix and responsive */
+  /* new css for fix and responsive */
 
 
 

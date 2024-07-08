@@ -75,7 +75,9 @@ function Highstreet() {
     }, []);
 
     return (
-        <div ref={fiveShowcaseRef} className="showcase fiveShowcase  bg-[url('/highstreet_bg.jpg')] hidden">
+        <div ref={fiveShowcaseRef} className="showcase   bg-[url('/highstreet_bg.jpg')] hidden">
+           
+           <div className='fiveShowcase'> 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -90,6 +92,8 @@ function Highstreet() {
                     <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
                 </div>
             </div>
+            </div>
+
         </div>
     );
 }

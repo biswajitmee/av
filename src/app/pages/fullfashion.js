@@ -74,7 +74,8 @@ function Fullfashion() {
     }, []);
 
     return (
-        <div ref={nineShowcaseRef} className="showcase oneShowcase bg-red-500 bg-[url('/fullfashion_bg.jpg')] hidden">
+        <div ref={nineShowcaseRef} className="showcase   bg-[url('/fullfashion_bg.jpg')] hidden">
+           <div className='nineShowcase'> 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
                     Designer
@@ -87,6 +88,7 @@ function Fullfashion() {
                         </div>
                     </div>
                     <p className='text-3xl'  ref={compresTextRef} >Build a quality brand <br /> worth your effort</p>
+                </div>
                 </div>
             </div>
         </div>
