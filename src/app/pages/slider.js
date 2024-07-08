@@ -66,7 +66,7 @@ const Slider = () => {
 
   return (
     <>
-      <div className='main-yell-bg h-full gurmukhi'>
+      <div className='h-full gurmukhi '>
         <div className='pt-[230px] pb-[120px] pl-[50px] text-[16px] md:text-[55px]  font-medium md:w-2/4 w-full'>Our 5 steps end-to-end process created with emerging brands in mind</div>
         <div className='hidden md:block'>
           <div className='h-screen flex items-center justify-center '>

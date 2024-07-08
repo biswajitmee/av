@@ -235,6 +235,8 @@ export default function Home() {
           <div className="ScrollSection bg-white pt-5 pb-5">
             <LogoScroller />
             <WhatWeDo />
+
+            
           </div>
           <Slider />
           <KeyFeature />
