@@ -6,10 +6,10 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-import Designer from './pages/designer';
-import Casual from './pages/casual';
-import Athleisure from './pages/athleisure';
-import Lounge from './pages/lounge';
+import Designer from './hoverSlider/designer';
+import Casual from './hoverSlider/casual';
+import Athleisure from './hoverSlider/athleisure';
+import Lounge from './hoverSlider/lounge';
 import CustomCursor from './customCursor';
 import LogoScroller from './components/brandHorizentalAnimation';
 import WhatWeDo from './components/whatWeDo';
@@ -17,13 +17,13 @@ import MenuAnimation from './components/menu';
 import KeyFeature from './components/keyFeature';
 
 import CardCarousel from './components/CardCarousel';
-import Highstreet from './pages/highstreet';
-import Athletic from './pages/athletic';
-import Swim from './pages/swim';
-import Denim from './pages/denim';
-import Fullfashion from './pages/fullfashion';
-import Outdoors from './pages/outdoors';
-import Others from './pages/others';
+import Highstreet from './hoverSlider/highstreet';
+import Athletic from './hoverSlider/athletic';
+import Swim from './hoverSlider/swim';
+import Denim from './hoverSlider/denim';
+import Fullfashion from './hoverSlider/fullfashion';
+import Outdoors from './hoverSlider/outdoors';
+import Others from './hoverSlider/others';
 import Slider from './components/slider';
 import Compare from './components/compare';
 import Faq from './components/faq';
