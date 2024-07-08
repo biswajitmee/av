@@ -26,8 +26,8 @@ function Swim() {
             );
 
             gsap.fromTo(compresDivRef.current,
-                { width: '0%', right: '0', left: 'auto' },
-                { width: '100%', duration: 1, ease: "power4.out" }
+                {delay:0.5, height: '0%', bottom: '0', top: 'auto' },
+                { height: '100%', duration: 1, ease: "power4.out", }
             );
 
             gsap.fromTo(compresTextRef.current,
@@ -54,9 +54,11 @@ function Swim() {
                 { display: 'none', duration: 0.1 }
             );
 
-            gsap.to(compresDivRef.current,
-                { width: '0%', duration: 1, ease: "power4.out" }
+            gsap.fromTo(compresDivRef.current,
+                { height: '100%', top: 'auto' },
+                { height: '0%', duration: 1, ease: "power4.out",  bottom: '0', }
             );
+
         };
 
         const spanElement = document.querySelector('.seven');
@@ -83,7 +85,7 @@ function Swim() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/swim_box.jpg')]">
+                            <div className="compresImgB bg-[url('/swim_box.jpg')]">
                             </div>
                         </div>
                     </div>
