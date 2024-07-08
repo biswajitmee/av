@@ -77,7 +77,7 @@ function Outdoors() {
             <div className='tenShowcase'> 
             <div className="flex flex-col lg:flex-row justify-center">
                 <div className='pt-24 lg:pt-24 pr-0 lg:pr-10 sansita text-6xl'>
-                    Designer
+                Outdoors
                 </div>
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>

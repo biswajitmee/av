@@ -26,9 +26,10 @@ function Highstreet() {
                 { display: 'block', duration: 0.5, opacity:1 }
             );
 
-            gsap.fromTo(compresDivRef.current,
-                { width: '0%', right: '0', left: 'auto' },
-                { width: '100%', duration: 1, ease: "power4.out" }
+             // left to right
+             gsap.fromTo(compresDivRef.current,
+                { width: '0%', left: '0',right:'auto' },
+                { width: '100%', duration: 1, ease: "power4.out", }
             );
 
             gsap.fromTo(compresTextRef.current,
@@ -55,8 +56,9 @@ function Highstreet() {
                 { display: 'none', duration: 0.1 }
             );
 
-            gsap.to(compresDivRef.current,
-                { width: '0%', duration: 1, ease: "power4.out" }
+            gsap.to(compresDivRef.current,                
+                { width: '100%', duration: 1, ease: "power4.out", },
+                { width: '0%', left: '0',right:'auto' }
             );
         };
 
@@ -85,7 +87,7 @@ function Highstreet() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/highstreet_box.jpg')]">
+                            <div className="compresImgLtoR bg-[url('/highstreet_box.jpg')]">
                             </div>
                         </div>
                     </div>

@@ -26,7 +26,7 @@ function Athleisure() {
             );
 
             gsap.fromTo(compresDivRef.current,
-                { width: '0%', right: '0', left: 'auto' },
+                {delay:0.5, width: '0%', right: '0', left: 'auto' },
                 { width: '100%', duration: 1, ease: "power4.out" }
             );
 

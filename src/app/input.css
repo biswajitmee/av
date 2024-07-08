@@ -288,6 +288,9 @@ body {
     height: 500px;
     border-radius: 7px;
   }
+ 
+
+
 
   .compresImg {
     width: 400px;
@@ -296,6 +299,27 @@ body {
     position: absolute;
     right: 0;
     border-radius: 7px;
+    background-color: #FF6D3A;
+  }
+
+  .compresImgLtoR {
+    width: 400px;
+    height: 500px;
+    background-position: center center;
+    position: absolute;
+    left: 0;
+    border-radius: 7px;
+    background-color: #FF6D3A;
+  }
+
+  .compresImgB {
+    width: 400px;
+    height: 500px;
+    background-position: center center;
+    position: absolute;
+    bottom:0;
+    border-radius: 7px;
+    background-color: #FF6D3A;
   }
 
 

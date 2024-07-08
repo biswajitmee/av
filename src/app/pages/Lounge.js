@@ -25,9 +25,12 @@ function Lounge() {
                 { display: 'block', duration: 0.1, opacity:1 }
             );
 
+     
+
+                // left to right
             gsap.fromTo(compresDivRef.current,
-                { width: '0%', right: '0', left: 'auto' },
-                { width: '100%', duration: 1, ease: "power4.out" }
+                { width: '0%', left: '0',right:'auto' },
+                { width: '100%', duration: 1, ease: "power4.out", }
             );
 
             gsap.fromTo(compresTextRef.current,
@@ -54,8 +57,9 @@ function Lounge() {
                 { display: 'none', duration: 0.1 }
             );
 
-            gsap.to(compresDivRef.current,
-                { width: '0%', duration: 1, ease: "power4.out" }
+            gsap.to(compresDivRef.current,                
+                { width: '100%', duration: 1, ease: "power4.out", },
+                { width: '0%', left: '0',right:'auto' }
             );
         };
 
@@ -83,7 +87,7 @@ function Lounge() {
                 <div className='pt-20 lg:pt-20'>
                     <div className='compresCover'>
                         <div ref={compresDivRef} className='compresDiv'>
-                            <div className="compresImg bg-[url('/lounge_box.jpg')]">
+                            <div className="compresImgLtoR bg-[url('/lounge_box.jpg')]">
                             </div>
                         </div>
                     </div>

@@ -1180,6 +1180,10 @@ video {
   padding-left: 2.5rem;
 }
 
+.pl-20{
+  padding-left: 5rem;
+}
+
 .pl-3{
   padding-left: 0.75rem;
 }
@@ -1654,6 +1658,27 @@ nav {
   position: absolute;
   right: 0;
   border-radius: 7px;
+  background-color: #FF6D3A;
+}
+
+.compresImgLtoR {
+  width: 400px;
+  height: 500px;
+  background-position: center center;
+  position: absolute;
+  left: 0;
+  border-radius: 7px;
+  background-color: #FF6D3A;
+}
+
+.compresImgB {
+  width: 400px;
+  height: 500px;
+  background-position: center center;
+  position: absolute;
+  bottom:0;
+  border-radius: 7px;
+  background-color: #FF6D3A;
 }
 
 .ScrollSection {
@@ -2223,6 +2248,10 @@ body {
 }
 
 @media (min-width: 1024px){
+  .lg\:ml-0{
+    margin-left: 0px;
+  }
+
   .lg\:h-80{
     height: 20rem;
   }
