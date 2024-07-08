@@ -10,9 +10,9 @@ import Designer from './pages/designer';
 import Casual from './pages/casual';
 import Athleisure from './pages/athleisure';
 import Lounge from './pages/lounge';
-import CustomCursor from './pages/customCursor';
-import LogoScroller from './brandHorizentalAnimation';
-import WhatWeDo from './whatWeDo';
+import CustomCursor from './customCursor';
+import LogoScroller from './components/brandHorizentalAnimation';
+import WhatWeDo from './components/whatWeDo';
  
  
 

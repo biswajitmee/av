@@ -10,13 +10,13 @@ import Designer from './pages/designer';
 import Casual from './pages/casual';
 import Athleisure from './pages/athleisure';
 import Lounge from './pages/lounge';
-import CustomCursor from './pages/customCursor';
-import LogoScroller from './brandHorizentalAnimation';
-import WhatWeDo from './whatWeDo';
-import MenuAnimation from './menu';
-import KeyFeature from './keyFeature';
+import CustomCursor from './customCursor';
+import LogoScroller from './components/brandHorizentalAnimation';
+import WhatWeDo from './components/whatWeDo';
+import MenuAnimation from './components/menu';
+import KeyFeature from './components/keyFeature';
 
-import CardCarousel from './CardCarousel';
+import CardCarousel from './components/CardCarousel';
 import Highstreet from './pages/highstreet';
 import Athletic from './pages/athletic';
 import Swim from './pages/swim';
@@ -24,10 +24,10 @@ import Denim from './pages/denim';
 import Fullfashion from './pages/fullfashion';
 import Outdoors from './pages/outdoors';
 import Others from './pages/others';
-import Slider from './pages/slider';
-import Compare from './pages/compare';
-import Faq from './pages/faq';
-import Howcanhelp from './pages/howcanhelp';
+import Slider from './components/slider';
+import Compare from './components/compare';
+import Faq from './components/faq';
+import Howcanhelp from './components/howcanhelp';
 
 const images = {
   Designer: 'designer_box.jpg',

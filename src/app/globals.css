@@ -1983,6 +1983,8 @@ nav {
   height: 1rem;
 }
 
+/* new css for fix and responsive */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
